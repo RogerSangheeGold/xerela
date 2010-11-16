@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Xerela Utilities
+Bundle-SymbolicName: org.xerela.net.util;singleton:=true
+Bundle-Version: 2008.10.0
+Bundle-ClassPath: ZUtilities.jar
+Export-Package: org.xerela.addressing,
+ org.xerela.common,
+ org.xerela.credentials,
+ org.xerela.credentials.utils,
+ org.xerela.exception,
+ org.xerela.net.snmp,
+ org.xerela.net.utils,
+ org.xerela.protocols,
+ org.xerela.security
+Bundle-Vendor: xerela.org
+Import-Package: javax.persistence,
+ javax.xml.bind.annotation,
+ org.apache.log4j
+Require-Bundle: org.xerela.zap.hibernate

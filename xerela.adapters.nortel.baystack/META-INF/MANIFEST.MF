@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: xerela.adapters.nortel.baystack
+Bundle-SymbolicName: xerela.adapters.nortel.baystack
+Bundle-Version: 2008.10.0
+Bundle-Vendor: xerela.org
+Perl-Include: scripts
+Bundle-Type: adapter

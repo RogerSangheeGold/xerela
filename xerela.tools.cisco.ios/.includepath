@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includepath>
+  <includepathentry path="${resource_loc:/org.xerela.adapters/scripts}" />
+  <includepathentry path="${resource_loc:/org.xerela.perl.common/lib}" />
+  <includepathentry path="${resource_loc:/xerela.tools.cisco.ios/scripts}" />
+  <includepathentry path="${resource_loc:/xerela.adapters.cisco.ios/scripts}" />
+</includepath>
+

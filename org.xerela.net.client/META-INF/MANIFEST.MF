@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Adapters Plug-in
+Bundle-SymbolicName: org.xerela.net.client
+Bundle-Version: 2008.10.0
+Export-Package: org.xerela.net.client
+Bundle-Vendor: xerela.org
+Import-Package: javax.jws,
+ javax.xml.bind,
+ javax.xml.bind.annotation,
+ javax.xml.ws
+Bundle-ClassPath: .
+Require-Bundle: org.xerela.metro.client;resolution:=optional,
+ org.xerela.zap.metro;resolution:=optional,
+ org.xerela.adapters.ws;resolution:=optional
+

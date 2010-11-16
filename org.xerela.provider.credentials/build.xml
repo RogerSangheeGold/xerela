@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="org.xerela.provider.credentials">
+	<description>
+            Build artifacts for org.xerela.provider.credentials
+    </description>
+
+	<target name="pre_jar">
+        <ant antfile="../Build/buildCG.xml" target="genwsdl.metro">
+            <property name="endpoint.class" value="org.xerela.provider.credentials.CredentialsDelegate" />
+            <property name="uptodate.test" value="Credentials.wsdl" />
+    	    <property name="aux.classpath" value="../org.xerela.net.util/bin" />
+            <property name="genwsdl.additional.classpath" value="../org.xerela.zap.security/bin" />
+        </ant>
+	</target>
+
+    <target name="pre_clean">
+        <delete dir="srcgen"/>
+        <delete dir="WEB-INF"/>
+
+        <mkdir dir="srcgen"/>
+    </target>
+</project>

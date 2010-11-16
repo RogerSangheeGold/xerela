@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.xerela.zap.security.SecurityPermissions">
+      <permission
+            display="%org.xerela.plugin.operation.write"
+            id="org.xerela.plugin.operation.write">
+      </permission>
+   </extension>
+</plugin>

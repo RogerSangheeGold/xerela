@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+    <extension
+        point="org.xerela.zap.hibernate.PersistenceUnit">
+        <persistence-unit name="xerela-ds">
+            <class name="org.xerela.provider.launchers.Launcher"/>
+        </persistence-unit>
+    </extension>
+    <extension point="org.xerela.zap.security.SecurityPermissions">
+       <permission
+             display="%org.xerela.launchers.administer"
+             id="org.xerela.launchers.administer">
+       </permission>
+    </extension>
+</plugin>

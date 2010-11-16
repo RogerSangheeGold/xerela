@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Security Plug-in
+Bundle-SymbolicName: org.xerela.server.security;singleton:=true
+Bundle-Version: 2008.10.0
+Bundle-Activator: org.xerela.server.security.internal.SecurityActivator
+Bundle-ClassPath: .
+Require-Bundle: org.eclipse.core.runtime,
+ org.apache.xerces,
+ org.mortbay.jetty.plus,
+ org.mortbay.jetty.server,
+ org.mortbay.jetty.servlet-api-2.5,
+ org.xerela.log4j,
+ org.xerela.zap.metro,
+ org.xerela.zap.security,
+ org.xerela.zap.web,
+ org.xerela.zap.hibernate,
+ org.xerela.zap.jta
+Eclipse-LazyStart: true
+Export-Package: org.xerela.server.security
+Eclipse-RegisterBuddy: org.xerela.zap.security
+Bundle-Localization: plugin
+Bundle-Vendor: Xerela.org

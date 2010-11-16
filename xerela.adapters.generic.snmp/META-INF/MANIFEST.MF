@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: xerela.adapters.generic.snmp
+Bundle-SymbolicName: xerela.adapters.generic.snmp
+Bundle-Version: 2008.10.0
+Bundle-Vendor: xerela.org
+Perl-Include: scripts
+Bundle-Type: adapter

@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Net Plug-in
+Bundle-SymbolicName: org.xerela.net
+Bundle-Version: 2008.10.0
+Bundle-Activator: org.xerela.net.NetActivator
+Import-Package: javax.persistence,
+ javax.xml.bind.annotation,
+ org.apache.log4j,
+ org.osgi.framework;version="1.3.0"
+Require-Bundle: org.eclipse.core.runtime,
+ org.xerela.net.util,
+ org.xerela.perl,
+ org.xerela.zap.hibernate
+Bundle-ClassPath: lib/SNMP4J.jar,
+ resources/,
+ net.jar
+Export-Package: org.snmp4j,
+ org.xerela.discovery,
+ org.xerela.net,
+ org.xerela.net.adapters,
+ org.xerela.net.common,
+ org.xerela.net.ping.icmp,
+ org.xerela.net.snmp,
+ org.xerela.net.tools
+Bundle-Vendor: xerela.org

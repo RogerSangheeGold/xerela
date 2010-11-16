@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Bootstrap Plug-in
+Bundle-SymbolicName: org.xerela.zap.bootstrap
+Bundle-Version: 2008.10.0
+Bundle-Activator: org.xerela.zap.bootstrap.internal.Activator
+Import-Package: org.apache.log4j,
+ org.eclipse.osgi.framework.console,
+ org.eclipse.osgi.framework.debug,
+ org.eclipse.osgi.util;version="1.0.0",
+ org.osgi.framework;version="1.3.0"
+Bundle-Vendor: xerela.org
+Require-Bundle: org.xerela.crates,
+ org.eclipse.osgi.util

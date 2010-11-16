@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Xerela tools
+Bundle-SymbolicName: org.xerela.tools;singleton:=true
+Bundle-Version: 2008.10.0
+Bundle-Vendor: xerela.org
+Implementation-Vendor: "Xerela.org"
+Main-Class: org.ztiptie.tools.ZtPasswd
+Bundle-ClassPath: .

@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: xerela.tools.model
+Bundle-SymbolicName: xerela.tools.model
+Bundle-Version: 2008.10.0
+Bundle-Localization: plugin
+Perl-Include: scripts
+ZTool-Directory: scripts
+Bundle-Vendor: xerela.org

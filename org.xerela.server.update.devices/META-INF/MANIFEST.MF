@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Devices Update Plug-in
+Bundle-SymbolicName: org.xerela.server.update.devices;singleton:=true
+Bundle-Version: 2008.10.0
+Bundle-Vendor: xerela.org
+Eclipse-LazyStart: true
+Bundle-Activator: org.xerela.server.update.devices.internal.UpdateDevicesActivator
+Require-Bundle: org.eclipse.core.runtime,
+ org.xerela.provider.update,
+ org.xerela.zap.hibernate,
+ org.xerela.zap.metro

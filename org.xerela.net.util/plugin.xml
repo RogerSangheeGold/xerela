@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+    <extension
+        point="org.xerela.zap.hibernate.PersistenceUnit">
+        <persistence-unit name="xerela-ds">
+            <class name="org.xerela.addressing.AddressSet"/>
+            <class name="org.xerela.credentials.Credential"/>
+            <class name="org.xerela.credentials.CredentialConfig"/>
+            <class name="org.xerela.credentials.CredentialSet"/>
+            <class name="org.xerela.credentials.DeviceToCredentialSetMapping"/>
+            <class name="org.xerela.protocols.Protocol"/>
+            <class name="org.xerela.protocols.ProtocolConfig"/>
+            <class name="org.xerela.protocols.ProtocolProperty"/>
+            <class name="org.xerela.protocols.DeviceToProtocolMapping"/>
+        </persistence-unit>
+    </extension>
+</plugin>

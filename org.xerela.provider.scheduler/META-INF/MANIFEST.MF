@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Scheduler Plug-in
+Bundle-SymbolicName: org.xerela.provider.scheduler;singleton:=true
+Bundle-Version: 2008.10.0
+Bundle-Localization: plugin
+Bundle-Activator: org.xerela.provider.scheduler.internal.SchedulerActivator
+DynamicImport-Package: *
+Bundle-ClassPath: lib/quartz-all-1.6.1.jar,
+ .
+Export-Package: org.quartz,
+ org.quartz.core,
+ org.quartz.helpers,
+ org.quartz.jobs,
+ org.quartz.listeners,
+ org.quartz.utils,
+ org.xerela.provider.scheduler
+Require-Bundle: org.eclipse.core.runtime,
+ org.xerela.apache.commons,
+ org.xerela.log4j,
+ org.xerela.zap.jms,
+ org.xerela.zap.jta,
+ org.xerela.zap.hibernate,
+ org.xerela.zap.metro,
+ org.xerela.zap.security
+Bundle-Vendor: xerela.org
+Eclipse-RegisterBuddy: org.xerela.zap.metro
+
