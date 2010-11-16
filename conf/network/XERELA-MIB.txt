@@ -1,0 +1,185 @@
+XERELA-MIB DEFINITIONS ::= BEGIN
+
+IMPORTS
+	enterprises,
+	MODULE-IDENTITY,
+	OBJECT-TYPE,
+	NOTIFICATION-TYPE,
+	IpAddress
+		FROM SNMPv2-SMI;
+
+xerela MODULE-IDENTITY
+	LAST-UPDATED "200709272023Z"	-- Sep 27, 2007 8:23:00 PM
+	ORGANIZATION "Xerela"
+	CONTACT-INFO
+		"Ryan Kruse
+		301 Congress Avenue
+		Suite 400
+		Austin, TX 78701
+		U.S.A
+		Tel:  (512) 536-8346
+		Email: rkruse@xerela.org
+		www.xerela.org"
+	DESCRIPTION
+		"Xerela SNMP Trap Definitions"
+	REVISION "200709272023Z"	-- Sep 27, 2007 8:23:00 PM
+	DESCRIPTION
+		"Initial version."
+	-- 1.3.6.1.4.1.29510
+	::= { enterprises 29510 }
+
+
+xerelaTraps OBJECT IDENTIFIER 
+	-- 1.3.6.1.4.1.29510.1
+	::= { xerela 1 }
+
+xerelaTrapObjects OBJECT IDENTIFIER 
+	-- 1.3.6.1.4.1.29510.2
+	::= { xerela 2 }
+
+xerelaDeviceHostname OBJECT-TYPE
+	SYNTAX  OCTET STRING
+	MAX-ACCESS read-only
+	STATUS  current
+	DESCRIPTION
+		"The name of the device as known to Xerela. 
+		This is usually the device's DNS hostname."
+	-- 1.3.6.1.4.1.29510.2.1
+	::= { xerelaTrapObjects 1 }
+
+
+xerelaDeviceIpAddress OBJECT-TYPE
+	SYNTAX  IpAddress
+	MAX-ACCESS read-only
+	STATUS  current
+	DESCRIPTION
+		"The preferred IP address of device."
+	-- 1.3.6.1.4.1.29510.2.2
+	::= { xerelaTrapObjects 2 }
+
+
+xerelaManagedNetwork OBJECT-TYPE
+	SYNTAX  OCTET STRING
+	MAX-ACCESS read-only
+	STATUS  current
+	DESCRIPTION
+		"Xerela devices can be identified by their IP address
+		and the managed network that they live in."
+	-- 1.3.6.1.4.1.29510.2.3
+	::= { xerelaTrapObjects 3 }
+
+
+xerelaConfigurationName OBJECT-TYPE
+	SYNTAX  OCTET STRING
+	MAX-ACCESS read-only
+	STATUS  current
+	DESCRIPTION
+		"The name of a configuration that exists
+		on a network device."
+	-- 1.3.6.1.4.1.29510.2.4
+	::= { xerelaTrapObjects 4 }
+
+
+xerelaAdapterName OBJECT-TYPE
+	SYNTAX  OCTET STRING
+	MAX-ACCESS read-only
+	STATUS  current
+	DESCRIPTION
+		"The name of a Xerela adapter."
+	-- 1.3.6.1.4.1.29510.2.5
+	::= { xerelaTrapObjects 5 }
+
+
+xerelaOsType OBJECT-TYPE
+	SYNTAX  OCTET STRING
+	MAX-ACCESS read-only
+	STATUS  current
+	DESCRIPTION
+		"The operating system description of a Xerela managed device.
+		This is also known as the shortName in a Xerela adapter."
+	-- 1.3.6.1.4.1.29510.2.6
+	::= { xerelaTrapObjects 6 }
+	
+xerelaOperationName OBJECT-TYPE
+	SYNTAX  OCTET STRING
+	MAX-ACCESS read-only
+	STATUS  current
+	DESCRIPTION
+		"The name of a Xerela operation.  For example, backup." 
+	-- 1.3.6.1.4.1.29510.2.7
+	::= { xerelaTrapObjects 7 }
+	
+xerelaMessageDetail OBJECT-TYPE
+	SYNTAX  OCTET STRING
+	MAX-ACCESS read-only
+	STATUS  current
+	DESCRIPTION
+		"Contains details of some message, such as a failure stack trace." 
+	-- 1.3.6.1.4.1.29510.2.8
+	::= { xerelaTrapObjects 8 }
+
+
+xerelaConfigurationChange NOTIFICATION-TYPE
+	OBJECTS {
+		xerelaDeviceHostname,
+		xerelaDeviceIpAddress,
+		xerelaManagedNetwork,
+		xerelaConfigurationName}
+	STATUS  current
+	DESCRIPTION
+		"A xerelaConfigurationChange trap is sent from
+		a Xerela server when there is configuration change
+		on a device.  This change is realized when Xerela
+		performs a backup operation."
+	-- 1.3.6.1.4.1.29510.1.1
+	::= { xerelaTraps 1 }
+
+
+xerelaAddDevice NOTIFICATION-TYPE
+	OBJECTS {
+		xerelaDeviceHostname,
+		xerelaDeviceIpAddress,
+		xerelaManagedNetwork,
+		xerelaAdapterName,
+		xerelaOsType}
+	STATUS  current
+	DESCRIPTION
+		"A xerelaAddDevice trap is sent from a Xerela
+		server when a new device has been added to the Xerela
+		inventory either through an automated discovery process
+		or by manual process."
+	-- 1.3.6.1.4.1.29510.1.2
+	::= { xerelaTraps 2 }
+
+
+xerelaDeleteDevice NOTIFICATION-TYPE
+	OBJECTS {
+		xerelaDeviceHostname,
+		xerelaDeviceIpAddress,
+		xerelaManagedNetwork,
+		xerelaAdapterName,
+		xerelaOsType}
+	STATUS  current
+	DESCRIPTION
+		"A xerelaDeleteDevice trap is sent from a Xerela
+		server when a device has been deleted from the Xerela
+		inventory."
+	-- 1.3.6.1.4.1.29510.1.3
+	::= { xerelaTraps 3 }
+	
+xerelaFailedOperation NOTIFICATION-TYPE
+	OBJECTS {
+		xerelaDeviceHostname,
+		xerelaDeviceIpAddress,
+		xerelaManagedNetwork,
+		xerelaOperationName,
+		xerelaMessageDetail}
+	STATUS  current
+	DESCRIPTION
+		"A xerelaDeleteDevice trap is sent from a Xerela
+		server when a device has been deleted from the Xerela
+		inventory."
+	-- 1.3.6.1.4.1.29510.1.4
+	::= { xerelaTraps 4 }
+
+END
