@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension-point id="summary" name="Install Summary" schema="schema/summary.exsd"/>
+
+   <extension point="org.xerela.provider.update.summary">
+      <summary class="org.xerela.provider.update.internal.CrateSummary" />
+   </extension>
+   <extension
+         point="org.xerela.zap.web.WebRegistry">
+      <servlet
+            alias="UpdateServlet"
+            class="org.xerela.provider.update.internal.UpdateServlet">
+         <url-pattern
+               pattern="/update">
+         </url-pattern>
+      </servlet>
+   </extension>
+</plugin>

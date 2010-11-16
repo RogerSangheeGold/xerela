@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: NIL Webservice
+Bundle-SymbolicName: org.xerela.adapters.ws;singleton:=true
+Bundle-Version: 2008.10.0
+Bundle-Vendor: xerela.org
+Bundle-ClassPath: .
+Require-Bundle: org.eclipse.core.runtime,
+ org.apache.xerces,
+ org.mortbay.jetty.servlet-api-2.5,
+ org.xerela.adapters,
+ org.xerela.log4j,
+ org.xerela.net,
+ org.xerela.net.servers,
+ org.xerela.stax,
+ org.xerela.zap.metro
+Eclipse-LazyStart: false
+Bundle-Activator: org.xerela.adapters.ws.internal.AdaptersWsActivator
+Export-Package: org.xerela.adapters.ws
+Eclipse-RegisterBuddy: org.xerela.zap.metro

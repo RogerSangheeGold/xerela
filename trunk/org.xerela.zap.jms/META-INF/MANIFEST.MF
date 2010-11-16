@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Jms Plug-in
+Bundle-SymbolicName: org.xerela.zap.jms
+Bundle-Version: 2008.10.0
+Bundle-Activator: org.xerela.zap.jms.internal.JmsActivator
+Bundle-Vendor: Xerela
+Import-Package: org.apache.log4j,
+ org.osgi.framework;version="1.3.0"
+Eclipse-LazyStart: true
+Bundle-ClassPath: .,
+ lib/activemq-all-5.2.jar,
+ lib/spring-beans-2.5.1.jar,
+ lib/spring-context-2.5.1.jar,
+ lib/spring-core-2.5.1.jar,
+ lib/xbean-spring-3.3.jar
+Require-Bundle: org.xerela.zap.jta,
+ org.xerela.zap.metro,
+ org.xerela.apache.commons
+Export-Package: javax.jms,
+ org.apache.activemq,
+ org.apache.activemq.command,
+ org.xerela.zap.jms

@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Scripts Plug-in
+Bundle-SymbolicName: org.xerela.tools.scripts;singleton:=true
+Bundle-Localization: plugin
+Bundle-Version: 2008.10.0
+ZTool-Directory: scripts
+Perl-Include: scripts
+Bundle-Vendor: xerela.org
+Require-Bundle: xerela.adapters.cisco.ios,
+ org.xerela.zap.security

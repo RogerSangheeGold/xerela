@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: xerela.adapters.checkpoint.secureplatform
+Bundle-SymbolicName: xerela.adapters.checkpoint.secureplatform
+Bundle-Version: 2008.10.0
+Bundle-Localization: plugin
+Perl-Include: scripts
+Bundle-Type: adapter
+Bundle-Vendor: xerela.org
+Require-Bundle: xerela.adapters.checkpoint.opsec

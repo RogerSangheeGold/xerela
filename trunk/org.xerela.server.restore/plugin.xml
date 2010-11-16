@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+    <extension point="org.xerela.provider.scheduler.quartzJob">
+      <JobType
+            class="org.xerela.server.restore.RestoreJob"
+            cudPermission="org.xerela.job.restore.cudPermission"
+            name="Restore Configuration"
+            runPermission="org.xerela.job.restore.runPermission">
+         <validKey name="ipResolutionData"/>
+         <validKey name="ipResolutionScheme"/>
+         <validKey name="configPath"/>
+         <validKey name="configTimestamp"/>
+      </JobType>
+   </extension>
+    <extension
+          point="org.xerela.zap.security.SecurityPermissions">
+       <permission
+             display="%org.xerela.job.restore.cudPermission"
+             id="org.xerela.job.restore.cudPermission">
+       </permission>
+       <permission
+             display="%org.xerela.job.restore.runPermission"
+             id="org.xerela.job.restore.runPermission">
+       </permission>
+    </extension>
+</plugin>

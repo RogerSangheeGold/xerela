@@ -1,0 +1,8 @@
+<types>
+    <type name="connectionPath" method="Xerela::ConnectionPath::from_xml"/>
+    <type name="credentials" method="Xerela::Credentials::from_xml"/>
+    <type name="protocols" method="Xerela::ConnectionPath::Protocol::from_xml"/>
+    <type name="fileServers" method="Xerela::ConnectionPath::FileServer::from_xml"/>
+    <type name="restoreFileInfo" method="Xerela::RestoreFile::from_xml"/>
+    <type name="filestoreRoot" method="Xerela::Filestore::from_xml"/>
+</types>

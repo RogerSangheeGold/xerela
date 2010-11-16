@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Nio
+Bundle-SymbolicName: org.xerela.net.tftp
+Bundle-Version: 2008.10.0
+Bundle-Vendor: xerela.org
+Require-Bundle: org.eclipse.osgi
+Import-Package: org.apache.commons.logging,
+ org.apache.log4j
+Bundle-ClassPath: tftpserver.jar
+Export-Package: org.xerela.nio.common,
+ org.xerela.nio.common.tuple,
+ org.xerela.nio.nioagent,
+ org.xerela.nio.nioagent.datagram,
+ org.xerela.nio.nioagent.datagram.tftp

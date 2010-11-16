@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Update Plug-in
+Bundle-SymbolicName: org.xerela.provider.update;singleton:=true
+Bundle-Version: 2008.10.0
+Bundle-Activator: org.xerela.provider.update.internal.UpdateActivator
+Require-Bundle: org.eclipse.core.runtime,
+ org.mortbay.jetty.servlet-api-2.5,
+ org.xerela.crates,
+ org.xerela.log4j,
+ org.xerela.zap.jta,
+ org.xerela.zap.metro,
+ org.xerela.zap.web
+Export-Package: org.xerela.provider.update
+Eclipse-LazyStart: false
+Eclipse-RegisterBuddy: org.xerela.zap.metro

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension-point id="quartzJob" name="Quartz Job" schema="schema/QuartzJob.exsd"/>
+    <extension
+        point="org.xerela.zap.hibernate.PersistenceUnit">
+        <persistence-unit name="xerela-ds">
+            <class name="org.xerela.provider.scheduler.ExecutionData"/>
+        </persistence-unit>
+    </extension>
+    <extension point="org.xerela.zap.security.SecurityPermissions">
+       <permission
+             display="%filterPermission"
+             id="org.xerela.filters.administer" />
+    </extension>
+</plugin>

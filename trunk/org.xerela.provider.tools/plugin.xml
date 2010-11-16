@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension-point id="org.xerela.provider.plugins"
+       name="org.xerela.provider.plugins.pluginManager"
+       schema="schema/org.xerela.provider.plugins.exsd"/>
+   <extension-point id="org.xerela.provider.plugins.servletDetail" name="org.xerela.provider.plugins.servletDetail" schema="schema/org.xerela.provider.plugins.servletDetail.exsd"/>
+
+   <extension point="org.xerela.provider.scheduler.quartzJob">
+      <JobType
+            class="org.xerela.provider.tools.ScriptToolJob"
+            cudPermission="org.xerela.job.plugin.cudPermission"
+            name="Script Tool Job"
+            runPermission="org.xerela.job.plugin.runPermission">
+         <validKey name="toolName"/>
+         <validKey name="devices"/>
+         <validKey name="jobParams"/>
+      </JobType>
+   </extension>
+
+
+   <extension point="org.xerela.provider.plugins">
+      <pluginManager
+            class="org.xerela.provider.tools.ScriptPluginManager">
+      </pluginManager>
+   </extension>
+   <extension
+         point="org.xerela.provider.plugins.servletDetail">
+      <detailProvider
+            class="org.xerela.provider.tools.ScriptPluginDetailStreamer"
+            jobClass="org.xerela.provider.tools.ScriptToolJob"
+            pluginType="script">
+      </detailProvider>
+   </extension>
+
+    <extension
+        point="org.xerela.zap.hibernate.PersistenceUnit">
+        <persistence-unit name="xerela-ds">
+            <class name="org.xerela.provider.tools.ToolRunDetails"/>
+            <class name="org.xerela.provider.tools.PluginExecRecord"/>
+        </persistence-unit>
+    </extension>
+    <extension
+          point="org.xerela.zap.web.WebRegistry">
+       <servlet
+             alias="ScriptToolResourceServlet"
+             class="org.xerela.provider.tools.ScriptToolResourceServlet">
+          <url-pattern
+                pattern="/scripttool">
+          </url-pattern>
+       </servlet>
+       <servlet
+             alias="PluginDetailServlet"
+             class="org.xerela.provider.tools.PluginDetailServlet">
+          <url-pattern
+                pattern="/pluginDetail">
+          </url-pattern>
+       </servlet>
+    </extension>
+    <extension
+          point="org.xerela.zap.security.SecurityPermissions">
+       <permission
+             display="%org.xerela.job.plugin.cudPermission"
+             id="org.xerela.job.plugin.cudPermission">
+       </permission>
+       <permission
+             display="%org.xerela.job.plugin.runPermission"
+             id="org.xerela.job.plugin.runPermission">
+       </permission>
+    </extension>
+
+</plugin>

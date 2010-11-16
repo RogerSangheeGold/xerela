@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension-point id="newRevision" name="org.xerela.provider.configstore.NewRevision" schema="schema/newRevision.exsd"/>
+   <extension
+         id="deviceConfigPersist"
+         name="deviceConfigPersist"
+         point="org.xerela.server.core.jobs.backupPersist">
+      <Persister class="org.xerela.provider.configstore.ConfigBackupPersister" />
+   </extension>
+
+   <extension
+         id="ConfigurationLuceneIndexer"
+         name="ConfigurationLuceneIndexer"
+         point="org.xerela.provider.configstore.newRevision">
+      <RevisionObserver class="org.xerela.provider.configstore.ConfigIndexerRevisionObserver"/>
+   </extension>
+
+   <extension
+         point="org.xerela.provider.configstore.newRevision">
+      <RevisionObserver class="org.xerela.provider.configstore.SnmpTrapRevisionObserver"/>
+   </extension>
+   <extension
+         point="org.xerela.provider.devices.inventoryChange">
+      <observer
+            class="org.xerela.provider.configstore.DeviceStoreObserver">
+      </observer>
+   </extension>
+   <extension
+         point="org.xerela.zap.security.SecurityPermissions">
+      <permission
+            display="%org.xerela.configs.view"
+            id="org.xerela.configs.view">
+      </permission>
+   </extension>
+   <extension
+         point="org.xerela.zap.hibernate.PersistenceUnit">
+      <persistence-unit
+            name="xerela-ds">
+         <class
+               name="org.xerela.provider.configstore.RevisionInfo">
+         </class>
+      </persistence-unit>
+   </extension>
+</plugin>

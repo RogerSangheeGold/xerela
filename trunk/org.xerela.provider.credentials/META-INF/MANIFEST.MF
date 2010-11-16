@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Credentials Plug-in
+Bundle-SymbolicName: org.xerela.provider.credentials;singleton:=true
+Bundle-Version: 2008.10.0
+Bundle-Vendor: xerela.org
+Import-Package: javax.jws,
+ javax.jws.soap,
+ javax.xml.bind.annotation,
+ javax.xml.ws,
+ org.apache.log4j,
+ org.eclipse.osgi.util;version="1.0.0",
+ org.osgi.framework;version="1.3.0",
+ org.osgi.util.tracker;version="1.3.2",
+ org.xerela.zap.jta
+Export-Package: org.xerela.provider.credentials
+Require-Bundle: org.xerela.net,
+ org.xerela.net.util,
+ org.xerela.provider.netman,
+ org.xerela.provider.devices,
+ org.xerela.server.security,
+ org.xerela.zap.hibernate,
+ org.xerela.zap.security
+Bundle-Activator: org.xerela.provider.credentials.internal.CredentialsProviderActivator
+Eclipse-RegisterBuddy: org.xerela.zap.metro
+Bundle-Localization: plugin

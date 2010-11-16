@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: xerela.adapters.threecom.corebuilder
+Bundle-SymbolicName: xerela.adapters.threecom.corebuilder
+Bundle-Version: 2008.10.0
+Bundle-Localization: plugin
+Perl-Include: scripts
+Bundle-Vendor: xerela.org
+Bundle-Type: adapter

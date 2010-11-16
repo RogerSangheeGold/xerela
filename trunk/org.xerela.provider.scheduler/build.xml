@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<project name="org.xerela.provider.scheduler">
+	<description>
+            Build artifacts for org.xerela.provider.scheduler
+    </description>
+
+	<target name="pre_jar">
+        <ant antfile="../Build/buildCG.xml" target="genwsdl.metro">
+            <property name="endpoint.class" value="org.xerela.provider.scheduler.SchedulerDelegate" />
+            <property name="uptodate.test" value="SchedulerService.wsdl" />
+            <property name="genwsdl.additional.classpath" value="../org.xerela.zap.security/bin" />
+        </ant>
+	</target>
+
+    <target name="pre_clean">
+        <delete dir="srcgen"/>
+        <delete dir="WEB-INF"/>
+
+        <mkdir dir="srcgen"/>
+    </target>
+</project>

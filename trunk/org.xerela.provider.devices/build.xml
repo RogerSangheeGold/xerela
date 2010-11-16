@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="org.xerela.provider.devices">
+	<description>
+            Build artifacts for org.xerela.provider.devices
+    </description>
+
+	<target name="pre_jar">
+        <ant antfile="../Build/buildCG.xml" target="genwsdl.metro">
+            <property name="endpoint.class" value="org.xerela.provider.devices.DeviceProviderDelegate" />
+            <property name="uptodate.test" value="Devices.wsdl" />
+            <property name="genwsdl.additional.classpath" value="../org.xerela.zap.security/bin" />
+        </ant>
+
+        <ant antfile="../Build/buildCG.xml" target="genwsdl.metro">
+            <property name="endpoint.class" value="org.xerela.provider.devices.SimpleDeviceSearchDelegate" />
+            <property name="uptodate.test" value="DeviceSearch.wsdl" />
+        </ant>
+
+        <ant antfile="../Build/buildCG.xml" target="genwsdl.metro">
+            <property name="endpoint.class" value="org.xerela.provider.devices.DeviceTagProviderDelegate" />
+            <property name="uptodate.test" value="DeviceTags.wsdl" />
+            <property name="genwsdl.additional.classpath" value="../org.xerela.zap.security/bin" />
+        </ant>
+<!--
+        <ant antfile="../Build/buildCG.xml" target="genwsdl">
+            <property name="wsdl.file" value="simplesearch.wsdl"/>
+            <property name="namespace" value="devices.provider.xerela.org"/>
+            <property name="classname" value="org.xerela.provider.devices.ISimpleDeviceSearch"/>
+            <property name="location" value="http://localhost:8080/services/xerela/server/devices/search"/>  
+        </ant>      
+
+		<ant antfile="../Build/buildCG.xml" target="genwsdl">
+            <property name="wsdl.file" value="tags.wsdl"/>
+            <property name="namespace" value="devices.provider.xerela.org"/>
+            <property name="classname" value="org.xerela.provider.devices.IDeviceTagProvider"/>
+            <property name="location" value="http://localhost:8080/services/xerela/server/devices/tags"/>  
+        </ant>
+-->
+    </target>
+   
+    <target name="pre_clean">
+        <delete dir="srcgen"/>
+        <delete dir="WEB-INF"/>
+
+        <mkdir dir="srcgen"/>
+    </target>
+</project>

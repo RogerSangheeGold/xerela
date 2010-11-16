@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension point="org.xerela.provider.scheduler.quartzJob">
+      <JobType
+            class="org.xerela.server.discovery.DiscoveryJob"
+            cudPermission="org.xerela.job.discovery.cudPermission"
+            name="Discover Devices"
+            runPermission="org.xerela.job.discovery.runPermission">
+         <validKey name="addresses"/>
+         <validKey name="crawl"/>
+         <validKey name="includeInventory"/>
+      </JobType>
+   </extension>
+   <extension
+         point="org.xerela.zap.security.SecurityPermissions">
+      <permission
+            display="%org.xerela.job.discovery.cudPermission"
+            id="org.xerela.job.discovery.cudPermission">
+      </permission>
+      <permission
+            display="%org.xerela.job.discovery.runPermission"
+            id="org.xerela.job.discovery.runPermission">
+      </permission>
+   </extension>
+</plugin>

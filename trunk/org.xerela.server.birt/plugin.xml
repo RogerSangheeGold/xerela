@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.xerela.provider.plugins">
+      <pluginManager
+            class="org.xerela.server.birt.ReportPluginManager">
+      </pluginManager>
+   </extension>
+
+   <extension
+         point="org.xerela.provider.scheduler.quartzJob">
+      <JobType
+            class="org.xerela.server.birt.ReportJob"
+            name="BIRT Report">
+      </JobType>
+   </extension>
+
+   <extension
+         point="org.eclipse.datatools.connectivity.oda.consumer.driverBridge">
+      <bridge
+            bridgeId="org.xerela.server.birt.internal.ZJdbcDriver"
+            driverType="org.eclipse.birt.report.data.oda.jdbc.OdaJdbcDriver">
+      </bridge>
+   </extension>
+
+  <extension 
+         point="org.eclipse.datatools.connectivity.oda.dataSource"> 
+      <dataSource 
+            odaVersion="3.0" 
+            driverClass="org.xerela.server.birt.internal.ZJdbcDriver" 
+            defaultDisplayName="Xerela BIRT Driver Bridge" 
+            setThreadContextClassLoader="false" 
+            id="org.xerela.server.birt.internal.ZJdbcDriver"/>
+   </extension>
+  <extension
+        point="org.xerela.provider.plugins.servletDetail">
+     <detailProvider
+           class="org.xerela.server.birt.ReportDetailStreamer"
+           jobClass="org.xerela.server.birt.ReportJob">
+     </detailProvider>
+  </extension>
+</plugin>

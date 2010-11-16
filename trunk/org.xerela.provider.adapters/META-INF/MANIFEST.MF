@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Adapters Plug-in
+Bundle-SymbolicName: org.xerela.provider.adapters
+Bundle-Version: 2008.10.0
+Bundle-Activator: org.xerela.provider.adapters.internal.AdapterProviderActivator
+Bundle-Vendor: xerela.org
+Import-Package: javax.jws,
+ javax.jws.soap,
+ javax.xml.bind.annotation,
+ javax.xml.ws,
+ org.apache.log4j,
+ org.osgi.framework,
+ org.osgi.util.tracker
+Export-Package: org.xerela.provider.adapters
+Require-Bundle: org.xerela.net,
+ org.xerela.net.util
+Eclipse-RegisterBuddy: org.xerela.zap.metro
