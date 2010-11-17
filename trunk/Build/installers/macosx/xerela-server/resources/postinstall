@@ -1,0 +1,27 @@
+#!/bin/sh
+#
+# Post-Install Logic
+
+# Change the ownership of all the files to "xerela"
+chown -R xerela /usr/local/xerela-server
+
+# Create a symbolic link to the Xerela server daemon script so the Xerela server can be started as a service
+#ln -s /usr/local/xerela-server/ztserver /etc/init.d/xerela-server
+
+# Ensure that both the Xerela server daemon script and the Java Service Wrapper are executable
+chmod +x /usr/local/xerela-server/ztserver
+chmod +x /usr/local/xerela-server/ztwrapper/macosx/ztwrapper
+
+# Create symbolic link to the Xerela server for certain run-levels
+#cd /etc/rc0.d
+#ln -s ../init.d/xerela-server K05xerela-server
+
+# Create symbolic link to the Xerela server for certain run-levels
+#cd /etc/rc5.d
+#ln -s ../init.d/xerela-server S95xerela-server
+
+# Run our Perl script to check to see if all of the Perl-requirements have been met
+perl /usr/local/xerela-server/perlcheck.pl
+
+# Start the Xerela Server
+#/etc/init.d/xerela-server start

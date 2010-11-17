@@ -1,0 +1,64 @@
+#!/bin/sh
+#
+# Pre-Install Logic for the Xerela Server
+#
+# Summary of how this script can be called:
+#        * <new-preinst> `install'
+#        * <new-preinst> `install' <old-version>
+#        * <new-preinst> `upgrade' <old-version>
+#        * <old-preinst> `abort-upgrade' <new-version>
+#
+# for details, see http://www.debian.org/doc/debian-policy/ or
+# the debian-policy package
+
+case "$1" in
+    install|upgrade)
+		# Create "xerela" user to run the server as if we are installing for the first time
+		if [ $1 = "install" ]
+		then
+			echo -n "Creating 'xerela' system user: "
+			useradd -r -c "System user for running the Xerela Server" xerela
+			echo "Done."
+		fi
+		
+		# Save the derby database and lucene index somewhere so they don't get over-written
+		if [ $1 = "upgrade" ]
+		then
+			echo "Upgrading from version $2 ..."
+			
+			# Delete and recreate the xerela user to be constructed properly with a valid shell
+			echo -n "Deleting and re-creating 'xerela' system user to ensure a proper shell is associated with it: "
+			userdel xerela
+			useradd -r -c "System user for running the Xerela Server" xerela
+			echo "Done."
+
+			# Preserve the Derby database, Lucene index, and preferences information
+			echo -n "Backing up user/password information, Xerela preferences, Derby database and Lucene index to '/tmp/xerela-server-backup': "
+			rm -rf /tmp/xerela-server-backup
+			mkdir /tmp/xerela-server-backup
+			cp -R /usr/share/xerela-server/osgi-config /tmp/xerela-server-backup
+			cp -R /usr/share/xerela-server/derby /tmp/xerela-server-backup
+			cp -R /usr/share/xerela-server/lucene /tmp/xerela-server-backup
+			touch /tmp/xerela-server-backup.lock
+			echo "Done."
+				
+			# Create a file to indicate that migration should happen
+			if [ -n $2 ] && [ $2 != "2008.04" ] && [ $2 != "2008.04-1" ]
+			then
+				echo -n "Flagging that database migration must be performed from version $2: "
+				touch /tmp/xerela-server-migration.lock
+				echo "Done."
+			fi
+		fi
+    ;;
+
+    abort-upgrade)
+    ;;
+
+    *)
+        echo "preinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+exit 0
