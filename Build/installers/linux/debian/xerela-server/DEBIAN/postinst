@@ -1,0 +1,62 @@
+#!/bin/sh
+#
+# Post-Install Logic for Xerela Server
+
+# Attempt to restore the Derby data base and Lucene index if they were preserved
+if [ -e "/tmp/xerela-server-backup.lock" ]
+then
+	echo -n "Restoring user/password information, Derby database and Lucene index: "
+	rm -f /usr/share/xerela-server/osgi-config/security/passwd
+	cp /tmp/xerela-server-backup/osgi-config/security/passwd /usr/share/xerela-server/osgi-config/security/passwd
+	cp -R /tmp/xerela-server-backup/osgi-config /usr/share/xerela-server/osgi-config-backup
+	rm -rf /usr/share/xerela-server/derby
+	rm -rf /usr/share/xerela-server/lucene
+	cp -R /tmp/xerela-server-backup/derby /usr/share/xerela-server
+	cp -R /tmp/xerela-server-backup/lucene /usr/share/xerela-server
+	rm -rf /tmp/xerela-server-backup
+	rm -f /tmp/xerela-server-backup.lock
+	echo "Done."
+fi
+
+# Attempt to migrate the database from an older version
+if [ -e "/tmp/xerela-server-migration.lock" ]
+then
+	echo "Migrating database to the latest version ... "
+	rm -f /tmp/xerela-server-migration.lock
+	cd /usr/share/xerela-server
+	migrationOutput=`perl dbutil.pl migrate`
+	echo "Migration output: \n$migrationOutput"
+fi
+
+# Change the ownership of all the files to "xerela"
+echo -n "Changing ownership of all files in '/usr/share/xerela-server' to 'xerela': "
+chown -R xerela:xerela /usr/share/xerela-server
+echo "Done."
+
+# Ensure that various scripts have execute privileges
+chmod +x /usr/share/xerela-server/perlcheck.pl
+chmod +x /usr/share/xerela-server/ztpasswd.sh
+chmod +x /usr/share/xerela-server/server.sh
+
+# Run our Perl script to check to see if all of the Perl-requirements have been met
+echo "Checking for any missing Perl requirements ..."
+perl /usr/share/xerela-server/perlcheck.pl
+
+# Ensure that both the Xerela server daemon script and the Java Service Wrapper are executable
+chmod +x /usr/share/xerela-server/ztserver
+chmod +x /usr/share/xerela-server/ztwrapper/linux/ztwrapper
+
+# Only install the service if it doesn't exist
+if [ ! -e "/etc/init.d/xerela-server" ]
+then
+	# Create a symbolic link to the Xerela server daemon script so the Xerela server can be started as a service
+	echo -n "Creating 'xerela-server' service: "
+	ln -s /usr/share/xerela-server/ztserver /etc/init.d/xerela-server
+	echo "Done."
+	
+	# Ensure that the Xerela server can start and stop at system start and system shutdown respectively
+	update-rc.d xerela-server defaults
+fi
+	
+# Start the Xerela Server in the proper Debian fashion
+invoke-rc.d xerela-server start
