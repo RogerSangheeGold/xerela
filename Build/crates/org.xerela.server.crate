@@ -1,0 +1,99 @@
+<crate
+     id="org.xerela.server"
+     name="Xerela EMS Server"
+     version="2008.10.0" >
+
+   <bundle id="org.eclipse.osgi" version="" location="core/" />
+
+   <bundle id="org.xerela.zap.bootstrap" version="" location="core/"/>
+   <bundle id="org.xerela.log4j" version="" location="core/" start="true"/>
+   <bundle id="org.xerela.apache.commons" version="" location="core/" start="true"/>
+   <bundle id="org.xerela.crates" version="" location="core/"/>
+
+   <bundle id="org.xerela.perl" version="" location="core/" start="true"/>
+
+   <bundle id="org.eclipse.equinox.preferences" location="core/"  version=""/>
+   <bundle id="org.eclipse.equinox.registry" location="core/" version="" />
+   <bundle id="org.eclipse.core.contenttype" location="core/" version="" />
+   <bundle id="org.eclipse.core.jobs" location="core/" version="" />
+   <bundle id="org.eclipse.core.runtime" location="core/" version="" />
+   <bundle id="org.eclipse.equinox.common" location="core/" version="" start="true"/>
+   <bundle id="org.eclipse.osgi.services" location="core/" version="" />   
+   <bundle id="org.eclipse.osgi.util" location="core/" version="" />
+   <!-- bundle id="org.eclipse.update.configurator" location="core/" version="" start="true"/ -->
+   <bundle id="org.apache.xerces" location="core/" version="" />
+
+   <!-- Jetty -->
+   <bundle id="org.mortbay.jetty.servlet-api-2.5" location="core/servlet-api-2.5-6.1.11.jar" version=""/>
+   <bundle id="org.mortbay.jetty.server" location="core/jetty-6.1.11.jar" version=""/>
+   <bundle id="org.mortbay.jetty.util" location="core/jetty-util-6.1.11.jar" version=""/>
+   <bundle id="org.mortbay.jetty.naming" location="core/jetty-naming-6.1.11.jar" version=""/>
+   <bundle id="org.mortbay.jetty.plus" location="core/jetty-plus-6.1.11.jar" version=""/>
+<!--
+   <bundle id="org.mortbay.jetty.annoations" location="core/jetty-annotations-6.1.11.jar" version=""/>
+   <bundle id="org.mortbay.jetty.management" location="core/jetty-management-6.1.11.jar" version=""/>
+   <bundle id="org.mortbay.jetty.jsp-2.1" location="core/jsp-2.1.jar" version=""/>
+   <bundle id="org.mortbay.jetty.jsp-api-2.1" location="core/jsp-api-2.1.jar" version=""/>
+-->
+
+   <bundle id="org.xerela.derby" location="core/" version="" start="true" />
+   <bundle id="org.xerela.jdbc" location="core/" version="" />
+   <bundle id="org.xerela.stax" location="core/" version="" />
+   <bundle id="org.xerela.slf4j" location="core/" version="" />
+   <bundle id="org.xerela.mozilla.jss4" location="core/" version="" />
+   <bundle id="org.xerela.mail" location="core/" version="" start="true"/>
+   <bundle id="org.xerela.woodstox" location="core/" version=""/>
+
+   <bundle id="org.xerela.zap.jta" location="core/" version="" start="true" />
+   <bundle id="org.xerela.zap.hibernate" location="core/" version="" start="true"/>
+   <bundle id="org.xerela.zap.metro" location="core/" version="" start="true"/>
+   <bundle id="org.xerela.zap.web" location="core/" version="" start="true"/>
+   <bundle id="org.xerela.zap.jms" location="core/" version="" start="true" />
+   <bundle id="org.xerela.zap.security" location="core/" version="" start="true"/>
+   <bundle id="org.xerela.zap.util" location="core/" version="" start="true" />
+
+   <bundle id="org.xerela.perl.common" location="core/" version="" />
+   <bundle id="org.xerela.net" location="core/" version="" start="true"/>
+   <bundle id="org.xerela.net.client" location="core/" version="" />
+   <bundle id="org.xerela.net.util" location="core/"  version="" />
+   <bundle id="org.xerela.net.ftp" location="core/" version="" />
+   <bundle id="org.xerela.net.tftp" location="core/" version="" />
+   <bundle id="org.xerela.net.servers" location="core/" version="" start="true"/>
+
+   <bundle id="org.xerela.adapters" location="core/" version="" start="true"/>
+
+<!--    
+   <bundle id="org.xerela.sjsxp" location="core/" version="" />
+-->
+   <bundle id="org.xerela.adapters.ws" location="core/" version="" start="true"/>
+   <bundle id="org.xerela.server.security" location="core/" version="" start="true"/>
+   <bundle id="org.xerela.server.lucene" location="core/" version="" start="true"/>
+   <bundle id="org.xerela.server.dns" location="core/" version="" start="true" />
+   <bundle id="org.xerela.server.core" location="core/" version="" start="true"/>
+   <bundle id="org.xerela.server.core.jobs" location="core/" version="" start="true"/>
+   <bundle id="org.xerela.server.discovery" location="core/" version="" start="true"/>
+   <bundle id="org.xerela.server.dispatcher" version="" location="core/" start="true"/>
+   <bundle id="org.xerela.server.restore" location="core/" version="" start="true"/>
+   <bundle id="org.xerela.server.update.devices" location="core/" version="" />
+   <bundle id="org.xerela.server.birt" location="core/" version="" start="true"/>
+
+<!-- experimental bundles.  exclude from build.
+   <bundle id="org.xerela.xdiff" location="core/" version="" start="true"/>
+   <bundle id="org.xerela.xdiff.macosx.x86" location="core/" version="" os="macosx"/>
+-->
+   <bundle id="org.xerela.provider.security" location="core/" version="" start="true" />
+   <bundle id="org.xerela.provider.events" location="core/" version="" start="true" />
+   <bundle id="org.xerela.provider.update" location="core/" version="" start="true" />
+   <bundle id="org.xerela.provider.adapters" location="core/" version="" start="true"/>
+   <bundle id="org.xerela.provider.configstore" location="core/" version="" start="true"/>
+   <bundle id="org.xerela.provider.launchers" location="core/" version="" start="true"/>
+   <bundle id="org.xerela.provider.netman" location="core/" version="" start="true" />
+   <bundle id="org.xerela.provider.devices" location="core/" version="" start="true"/>
+   <bundle id="org.xerela.provider.credentials" location="core/" version="" start="true"/>
+   <bundle id="org.xerela.provider.telemetry" location="core/" version="" start="true"/>
+   <bundle id="org.xerela.provider.tools" location="core/" version="" start="true"/>
+   <bundle id="org.xerela.provider.scheduler" location="core/" start="true" version=""/>
+
+   <bundle id="org.xerela.tools.scripts" location="tools/" version=""/>
+   <bundle id="org.xerela.tools" location="core/" version="" />
+</crate>

@@ -1,0 +1,8 @@
+<crate
+	id="xerela.adapters.extreme.xos"
+	name="xerela.adapters.extreme.xos"
+	version="2008.10.0" >
+
+<category name="adapters"/>
+<bundle id="xerela.adapters.extreme.xos" location="adapters/" version="" />
+</crate>

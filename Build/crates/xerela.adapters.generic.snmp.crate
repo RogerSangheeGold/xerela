@@ -1,0 +1,8 @@
+<crate
+	id="xerela.adapters.generic.snmp"
+	name="xerela.adapters.generic.snmp"
+	version="2008.10.0" >
+
+<category name="adapters"/>
+<bundle id="xerela.adapters.generic.snmp" location="adapters/" version="" />
+</crate>

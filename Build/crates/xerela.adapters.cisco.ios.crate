@@ -1,0 +1,8 @@
+<crate
+	id="xerela.adapters.cisco.ios"
+	name="xerela.adapters.cisco.ios"
+	version="2008.10.0" >
+
+<category name="adapters"/>
+<bundle id="xerela.adapters.cisco.ios" location="adapters/" version="" />
+</crate>

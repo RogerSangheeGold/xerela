@@ -1,0 +1,8 @@
+<crate
+	id="xerela.tools.cisco.ios"
+	name="xerela.tools.cisco.ios"
+	version="2008.10.0" >
+
+	<category name="tools"/>
+	<bundle id="xerela.tools.cisco.ios" location="tools/" version="" />
+</crate>

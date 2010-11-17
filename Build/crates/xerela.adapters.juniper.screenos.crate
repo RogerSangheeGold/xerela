@@ -1,0 +1,8 @@
+<crate
+	id="xerela.adapters.juniper.screenos"
+	name="xerela.adapters.juniper.screenos"
+	version="2008.10.0" >
+
+<category name="adapters"/>
+<bundle id="xerela.adapters.juniper.screenos" location="adapters/" version="" />
+</crate>

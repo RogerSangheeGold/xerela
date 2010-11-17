@@ -1,0 +1,8 @@
+<crate
+	id="xerela.adapters.cisco.linksys"
+	name="xerela.adapters.cisco.linksys"
+	version="2008.10.0" >
+
+<category name="adapters"/>
+<bundle id="xerela.adapters.cisco.linksys" location="adapters/" version="" />
+</crate>

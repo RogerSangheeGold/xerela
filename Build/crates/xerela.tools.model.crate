@@ -1,0 +1,8 @@
+<crate
+	id="xerela.tools.model"
+	name="xerela.tools.model"
+	version="2008.10.0" >
+
+	<category name="tools"/>
+	<bundle id="xerela.tools.model" location="tools/" version="" />
+</crate>

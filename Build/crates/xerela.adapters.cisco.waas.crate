@@ -1,0 +1,8 @@
+<crate
+	id="xerela.adapters.cisco.waas"
+	name="xerela.adapters.cisco.waas"
+	version="2008.10.0" >
+
+<category name="adapters"/>
+<bundle id="xerela.adapters.cisco.waas" location="adapters/" version="" />
+</crate>
