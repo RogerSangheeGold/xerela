@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="XerelaInstaller" default="winstall">
+	<description>
+            Xerela Installer Build
+    </description>
+
+	<!-- Set property if the OS family is windows -->
+	<condition property="makensis.executable" value="${basedir}/installers/nsis/makensis.exe">
+		<os family="windows"/>
+	</condition>
+	<condition property="makensis.executable" value="makensis">
+		<os family="unix"/>
+	</condition>
+
+	<target name="winstall">
+		<!-- Make the artifacts directory so the installers can be placed there -->
+		<mkdir dir="../dist/artifacts" />
+		<exec executable="${makensis.executable}" failonerror="true">
+			<arg value="${basedir}/installers/windows/XerelaServer.nsi"/>
+		</exec>
+	</target>
+
+	<!--
+	 ! The following properties must be passed in...
+	 !   - version.number
+	 !   - version.qualifier
+	 !   - rpm.requires (the package dependencies to use for the Requires field in the rpm)
+	 !   - rpm.platform (eg: mdv, fc4, etc)
+	 !-->
+	<target name="rpmbuild">
+		<property name="rpm.buildroot" value="${basedir}/../dist/rpm-build"/>
+		<property name="rpm.topdir" value="${basedir}/../dist/rpm-topdir"/>
+		<property name="rpm.sourcedir" value="${basedir}/../dist/artifacts" />
+		<property name="rpm.rpmdir" value="${basedir}/../dist/artifacts" />
+		<property name="rpm.release" value="1" />
+
+		<delete dir="${rpm.buildroot}" />
+		<delete dir="${rpm.topdir}" />
+
+		<mkdir dir="${rpm.buildroot}"/>
+		<mkdir dir="${rpm.topdir}"/>
+		<mkdir dir="${rpm.topdir}/BUILD"/>
+
+		<exec executable="rpmbuild">
+			<arg value="-D" />
+			<arg value="release ${rpm.release}${rpm.platform}"/>
+			<arg value="-D" />
+			<arg value="version ${version.number}.${version.qualifier}"/>
+			<arg value="-D" />
+			<arg value="archive xerela-server-${version.number}.${version.qualifier}-UNSTABLE.tgz"/>
+			<arg value="-D" />
+			<arg value="require ${rpm.requires}"/>
+			<arg value="-D" />
+			<arg value="_topdir ${rpm.topdir}" />
+			<arg value="-D" />
+			<arg value="_rpmdir ${rpm.rpmdir}" />
+			<arg value="-D" />
+			<arg value="_sourcedir ${rpm.sourcedir}" />
+			<arg value="--buildroot=${rpm.buildroot}"/>
+			<arg value="-bb"/>
+			<arg value="${basedir}/installers/linux/xerela-server.spec"/>
+		</exec>
+	</target>
+
+	<!--
+	 ! The following properties must be passed in...
+	 !   - server.location (specifies the directory containing all of the files for the Xerela Debian/Ubuntu Server)
+	 !-->
+	<target name="deb.server" description="Generates a .deb package for the Xerela Server.">
+		<!-- Require the the "server.location" property be set. -->
+		<fail message="The 'server.location' property must be specified and reference a valid/accessible directory!" unless="server.location"/>
+		
+		<property name="artifacts.dir" value="${basedir}/../dist/artifacts" />
+		<property name="deb.base.xerela.server.dir" value="${artifacts.dir}/debian/xerela-server" />
+		<property name="deb.user.space.xerela.server.dir" value="usr/share/xerela-server" />
+
+		<!-- Ensure that the artifacts directory exists -->
+		<mkdir dir="${artifacts.dir}" />
+		
+		<!-- Delete any pre-existing server files used by dpkg -->
+		<delete failonerror="false" dir="${deb.base.xerela.server.dir}" />
+
+		<!-- Copy the template for making the Xerela Server .deb package -->
+		<copy todir="${artifacts.dir}" >
+			<fileset dir="${basedir}/installers/linux">
+				<include name="debian/xerela-server/**/*"/>
+			</fileset>
+		</copy>
+
+		<!-- Make the /usr/share/xerela-server directory to house the Xerela server -->
+		<mkdir dir="${deb.base.xerela.server.dir}/${deb.user.space.xerela.server.dir}" />
+
+		<!-- Copy all of the server files to the /usr/share/xerela-server directory -->
+		<copy todir="${deb.base.xerela.server.dir}/${deb.user.space.xerela.server.dir}" >
+			<fileset dir="${server.location}" includes="**/*"/>
+		</copy>
+
+		<!-- Make necessary files as executable -->
+		<exec executable="chmod" os="Linux">
+			<arg value="+x" />
+			<arg value="${deb.base.xerela.server.dir}/DEBIAN/preinst" />
+			<arg value="${deb.base.xerela.server.dir}/DEBIAN/postinst" />
+			<arg value="${deb.base.xerela.server.dir}/DEBIAN/prerm" />
+			<arg value="${deb.base.xerela.server.dir}/DEBIAN/postrm" />
+		</exec>
+
+		<!-- Build the .deb package -->
+		<exec executable="dpkg" os="Linux">
+			<arg value="--build" />
+			<arg value="${deb.base.xerela.server.dir}" />
+		</exec>
+	</target>
+</project>
