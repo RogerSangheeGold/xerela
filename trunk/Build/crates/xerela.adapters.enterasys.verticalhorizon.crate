@@ -1,0 +1,8 @@
+<crate
+	id="xerela.adapters.enterasys.verticalhorizon"
+	name="xerela.adapters.enterasys.verticalhorizon"
+	version="2008.10.0" >
+
+<category name="adapters"/>
+<bundle id="xerela.adapters.enterasys.verticalhorizon" location="adapters/" version="" />
+</crate>

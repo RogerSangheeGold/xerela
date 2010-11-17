@@ -1,0 +1,8 @@
+<crate
+	id="xerela.adapters.nortel.tiara"
+	name="xerela.adapters.nortel.tiara"
+	version="2008.10.0" >
+
+<category name="adapters"/>
+<bundle id="xerela.adapters.nortel.tiara" location="adapters/" version="" />
+</crate>

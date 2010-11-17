@@ -1,0 +1,9 @@
+<crate
+	id="xerela.adapters.hp.procurve"
+	name="xerela.adapters.hp.procurve"
+	version="2008.10.0" >
+
+<category name="adapters"/>
+<bundle id="xerela.adapters.hp.procurve" location="adapters/" version="" />
+<bundle id="xerela.adapters.hp.procurvem" location="adapters/" version="" />
+</crate>

@@ -1,0 +1,8 @@
+<crate
+	id="xerela.adapters.cisco.acns"
+	name="xerela.adapters.cisco.acns"
+	version="2008.10.0" >
+
+<category name="adapters"/>
+<bundle id="xerela.adapters.cisco.acns" location="adapters/" version="" />
+</crate>

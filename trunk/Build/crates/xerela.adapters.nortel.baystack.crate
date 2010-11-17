@@ -1,0 +1,8 @@
+<crate
+	id="xerela.adapters.nortel.baystack"
+	name="xerela.adapters.nortel.baystack"
+	version="2008.10.0" >
+
+<category name="adapters"/>
+<bundle id="xerela.adapters.nortel.baystack" location="adapters/" version="" />
+</crate>

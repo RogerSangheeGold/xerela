@@ -1,0 +1,8 @@
+<crate
+	id="xerela.adapters.nortel.passport"
+	name="xerela.adapters.nortel.passport"
+	version="2008.10.0" >
+
+<category name="adapters"/>
+<bundle id="xerela.adapters.nortel.passport" location="adapters/" version="" />
+</crate>

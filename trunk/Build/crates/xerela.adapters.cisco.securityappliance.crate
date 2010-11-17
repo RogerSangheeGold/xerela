@@ -1,0 +1,8 @@
+<crate
+	id="xerela.adapters.cisco.securityappliance"
+	name="xerela.adapters.cisco.securityappliance"
+	version="2008.10.0" >
+
+<category name="adapters"/>
+<bundle id="xerela.adapters.cisco.securityappliance" location="adapters/" version="" />
+</crate>

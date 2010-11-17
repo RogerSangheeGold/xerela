@@ -1,0 +1,8 @@
+<crate
+	id="xerela.adapters.alcatel.omniswitch"
+	name="xerela.adapters.alcatel.omniswitch"
+	version="2008.10.0" >
+
+<category name="adapters"/>
+<bundle id="xerela.adapters.alcatel.omniswitch" location="adapters/" version="" />
+</crate>

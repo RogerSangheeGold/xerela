@@ -1,0 +1,8 @@
+<crate
+	id="xerela.adapters.dell.powerconnect"
+	name="xerela.adapters.dell.powerconnect"
+	version="2008.10.0" >
+
+<category name="adapters"/>
+<bundle id="xerela.adapters.dell.powerconnect" location="adapters/" version="" />
+</crate>

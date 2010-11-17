@@ -1,0 +1,8 @@
+<crate
+	id="xerela.adapters.enterasys.ssr"
+	name="xerela.adapters.enterasys.ssr"
+	version="2008.10.0" >
+
+<category name="adapters"/>
+<bundle id="xerela.adapters.enterasys.ssr" location="adapters/" version="" />
+</crate>

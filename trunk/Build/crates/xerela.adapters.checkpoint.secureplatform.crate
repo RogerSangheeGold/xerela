@@ -1,0 +1,8 @@
+<crate
+	id="xerela.adapters.checkpoint.secureplatform"
+	name="xerela.adapters.checkpoint.secureplatform"
+	version="2008.10.0" >
+
+<category name="adapters"/>
+<bundle id="xerela.adapters.checkpoint.secureplatform" location="adapters/" version="" />
+</crate>
