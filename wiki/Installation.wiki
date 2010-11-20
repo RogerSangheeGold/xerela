@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary Guide for the installation of the Xerela server.
 #labels Phase-Deploy,Featured
 
 = Introduction =
