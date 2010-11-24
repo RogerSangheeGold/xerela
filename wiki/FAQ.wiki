@@ -1,13 +1,11 @@
 #summary Frequently Asked Questions.
 
-= Introduction =
+= FAQ =
 
-Add your content here.
+Why the name change from !ZipTie to Xerela?
 
+I worked for !AlterPoint -- can I contribute?
 
-= Details =
+How do I know Xerela won't pull a license switch-a-roo like !AlterPoint did?
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+Why recreate all the project documentation instead of just copying it over from !ZipTie / !NetworkAuthority Inventory?
