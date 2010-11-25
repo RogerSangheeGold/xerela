@@ -1,14 +1,22 @@
 #summary Guide for the installation of the Xerela server.
 #labels Phase-Deploy,Featured
 
-= Introduction =
+For now there's a Windows installer.  Instructions for installing on Mac and Linux will be coming soon.
 
-Add your content here.
+= Prerequisites =
 
+Server:
+  * Java Development Kit (JDK) version 1.5 (aka version 5) or higher
+    ** download [http://www.oracle.com/technetwork/java/javase/downloads/index.html JDK 6]
+    ** download [http://www.oracle.com/technetwork/java/javase/downloads/index-jdk5-jsp-142662.html JDK 5]
+  * Perl 5.8 or higher - for Windows, [http://www.activestate.com/activeperl/downloads ActiveState Perl] is recommended: 
 
-= Details =
+Client:
+  * A browser with the [http://www.adobe.com/products/flashplayer/ Adobe Flash 9 Player]
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+= Windows Quickstart =
+
+  * Download the [http://code.google.com/p/xerela/downloads/detail?name=XerelaServerSetup.2010-11-18v01.exe&can=2&q= latest installer]
+  * Launch the installer and follow the instructions
+  * Once the server is running, connect to it at https://servername:8080/
+  * The default authentication credentials are admin/password
