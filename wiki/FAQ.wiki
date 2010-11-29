@@ -12,4 +12,4 @@ That depends on your particular employment agreement and how long it's been sinc
 
 == Why recreate all the project documentation instead of just copying it over from !ZipTie / !NetworkAuthority Inventory? ===
 
-Though the !ZipTie source code was released under the MPL until October 2008, it's not clear to me that the same is true for the !ZipTie documentation, especially since most if not all of the documentation was written by AlterPoint employees.  As far as I can tell, the copyright for all of the documentation is owned by !AlterPoint and cannot be copied or distributed without a license.  If you have any reason to suspect otherwise, please comment below.
+Though the !ZipTie source code was released under the MPL until October 2008, it's not clear that the same is true for the !ZipTie documentation, especially since most if not all of the documentation was written by !AlterPoint employees.  As far as I can tell, the copyright for all of the documentation is owned by !AlterPoint and cannot be copied or distributed without a license.  If you have any reason to suspect otherwise, please comment below.
