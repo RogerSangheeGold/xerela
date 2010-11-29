@@ -1,14 +1,17 @@
 #summary Guide for setting up a development environment.
 #labels Phase-Implementation
 
-= Introduction =
 
-Add your content here.
+http://xerela.googlecode.com/svn/trunk/Documentation/Developer/img/dev_setup-checkstyle_main.png
 
+http://xerela.googlecode.com/svn/trunk/Documentation/Developer/img/dev_setup-checkstyle_config_props.png
 
-= Details =
+http://xerela.googlecode.com/svn/trunk/Documentation/Developer/img/dev_setup-code-templates.png
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+http://xerela.googlecode.com/svn/trunk/Documentation/Developer/img/dev_setup-epic-template.png
+
+http://xerela.googlecode.com/svn/trunk/Documentation/Developer/img/dev_setup-formatter.png
+
+http://xerela.googlecode.com/svn/trunk/Documentation/Developer/img/dev_setup-target-platform-definition.png
+
+http://xerela.googlecode.com/svn/trunk/Documentation/Developer/img/dev_setup-target-platform-main.png
