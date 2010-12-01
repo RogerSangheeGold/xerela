@@ -1,7 +1,7 @@
 #summary Guide for setting up a development environment.
 #labels Phase-Implementation
 
-<wiki:toc max_depth="2" />
+<wiki:toc max_depth="3" />
 
 [[xerela]] refers to your Xerela workspace in Eclipse, or the directory into which you check out into from SVN.  It should contain the folders AdapterTool, Build, conf, EclipseBuild, etc.
 	
@@ -47,7 +47,7 @@ And the following Eclipse plugins:
  * If you have not set JAVA_HOME to your JDK or if your JAVA_HOME is pointing at a 64-bit JDK, then you’ll need to set the {{{java.home}}} value in the file {{{      [xerela]/TargetPlatform/flex/bin/jvm.config }}} to {{{java.home=<32-BIT-JDK_ROOT>/jre}}}
      Otherwise you’ll see an error like:
      Error loading: C:\Java\jdk1.6.0_22\jre\bin\client\jvm.dll
- * In the [xerela]/Build/ directory run ant clean dbreset. 
+ * In the [[xerela]]/Build/ directory run ant clean dbreset. 
 
 == Eclipse Configuration ==
 === Eclipse-CS ===
@@ -57,13 +57,33 @@ To configure,
 
 http://xerela.googlecode.com/svn/trunk/Documentation/Developer/img/dev_setup-checkstyle_main.png
 
+ * Set the following: 
+   * Type: Project Relative Configuration
+   * Name: Xerela Checkstyle
+   * Location: /Build/conf/xerela_eclipse_cs.xml
+
 http://xerela.googlecode.com/svn/trunk/Documentation/Developer/img/dev_setup-checkstyle_config_props.png
+
+=== !FindBugs ===
+Make sure the !FindBugs plugin is installed.  No further configuration is necessary.
+
+===Code Style Settings===
+Go to Window > Preferences > Java > Code Style > Formatter.  Import the Formatter at [[xerela]]/Build/conf/xerela_codeformat.xml.
+
+http://xerela.googlecode.com/svn/trunk/Documentation/Developer/img/dev_setup-formatter.png
+
+===Code Template===
+Go to Window > Preferences > Java > Code Style > Code Templates.  Import the Template at [[xerela]]/Build/conf/xerela_codetemplates.xml.
 
 http://xerela.googlecode.com/svn/trunk/Documentation/Developer/img/dev_setup-code-templates.png
 
+===Perl Template (optional - only if you’ve installed the EPIC plugin)===
+Go to Window > Preferences > Perl EPIC > Editor > Templates.  Import the Template at [[xerela]]/Build/conf/xerela_epic_template.xml.
+
 http://xerela.googlecode.com/svn/trunk/Documentation/Developer/img/dev_setup-epic-template.png
 
-http://xerela.googlecode.com/svn/trunk/Documentation/Developer/img/dev_setup-formatter.png
+===Set Target Platform===
+Go to Window > Preferences > Plug-in Development > Target Platform and add the location {{{${workspace_loc}\TargetPlatform\eclipse}}}
 
 http://xerela.googlecode.com/svn/trunk/Documentation/Developer/img/dev_setup-target-platform-definition.png
 
