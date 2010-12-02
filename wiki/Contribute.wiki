@@ -1,7 +1,7 @@
 #summary How to contribute to the Xerela project.
 #labels Featured
 
-No matter what you're background or how much time or other resources you have, there's a way for you to contribute to the success of Xerela NCCM.  If you'd like to contribute, please contact [mailto:contribute@xerela.com?Subject=Contribute contribute@xerela.com]
+No matter what you're background or how much time or other resources you have, there's a way for you to contribute to the success of Xerela NCCM.  If you'd like to contribute, contact [mailto:contribute@xerela.com?Subject=Contribute contribute@xerela.com].  You'll also need to sign and send the [http://xerela.googlecode.com/svn/trunk/Documentation/Developer/Legal/Xerela_Contributor_Agreement.pdf Xerela Contributor Agreement].
 
 <wiki:toc max_depth="2" />
 
