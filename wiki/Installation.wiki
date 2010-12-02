@@ -6,7 +6,7 @@ For now there's a Windows installer.  Instructions for installing on Mac and Lin
 = Prerequisites =
 
 Server:
-  * Java Development Kit (JDK) version 1.5 (aka version 5) or higher
+  * Java Development Kit (JDK) version 1.5 (aka Java 5) or higher
     ** download [http://www.oracle.com/technetwork/java/javase/downloads/index.html JDK 6]
     ** download [http://www.oracle.com/technetwork/java/javase/downloads/index-jdk5-jsp-142662.html JDK 5]
   * Perl 5.8 or higher - for Windows, [http://www.activestate.com/activeperl/downloads ActiveState Perl] is recommended: 
