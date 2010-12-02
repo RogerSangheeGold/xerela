@@ -4,7 +4,7 @@
 = Legal ==
 == Why the name change from !ZipTie to Xerela? ===
 
-The ZipTie trademark is owned by !AlterPoint.  !AlterPoint used this trademark until at least October 2008, and the statutory period for prima facie evidence of abandonment is three years.
+The !ZipTie trademark is owned by !AlterPoint.  !AlterPoint used this trademark until at least October 2008, and the statutory period for prima facie evidence of abandonment is three years.
 
 == I worked for !AlterPoint -- can I contribute? ===
 
