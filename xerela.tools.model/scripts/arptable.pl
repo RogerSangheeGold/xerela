@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 use strict;
 
-use Xerela::Client;
+use ZipTie::Client;
 use Xerela::Logger;
 
 my $ip = $ARGV[0];
@@ -14,7 +14,7 @@ local $SIG{__WARN__} = sub {
 	$LOGGER->debug($warning);
 };
 
-my $client = Xerela::Client->new();
+my $client = ZipTie::Client->new();
 my $page = { pageSize => 100 };
 
 my $offset = 0;

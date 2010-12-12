@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use Xerela::Client;
+use ZipTie::Client;
 use Term::ReadKey;
 use Term::ShellUI;
 use Data::Dumper;
@@ -19,7 +19,7 @@ sub login
 {
 	my $password = _read_password("Administrator password: ");
 
-	our $client = Xerela::Client->new(
+	our $client = ZipTie::Client->new(
 		username => 'admin',
 		password => $password,
 		host     => 'localhost:8080',

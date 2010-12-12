@@ -1,4 +1,4 @@
-package Xerela::Client;
+package ZipTie::Client;
 
 use strict;
 use warnings;
@@ -6,7 +6,7 @@ use vars qw($AUTOLOAD $VERSION);
 
 =head1 NAME
 
-Xerela::Client - Webservice client for the Xerela server
+ZipTie::Client - Webservice client for the Xerela server
 
 =head1 VERSION
 
@@ -18,9 +18,9 @@ $VERSION = "1.3";
 
 =head1 SYNOPSIS
 
-use Xerela::Client;
+use ZipTie::Client;
 
-my $client = Xerela::Client->new(username => 'admin', password => 'password', host => 'localhost:8080', );
+my $client = ZipTie::Client->new(username => 'admin', password => 'password', host => 'localhost:8080', );
 
 $client->devices()->createDevice('10.1.2.1', 'Default', 'Xerela::Adapters::Cisco::IOS');
 
@@ -29,13 +29,13 @@ $client->devicetags()->tagDevices('HQ', '10.1.2.1@Default');
 
 =head1 DESCRIPTION
 
-C<Xerela::Client> is a simple webservice client for a Xerela server.
+C<ZipTie::Client> is a simple webservice client for a Xerela server.
 
 =head1 PUBLIC SUB-ROUTINES
 
 =over
 
-=item $client = Xerela::Client->new( %options )
+=item $client = ZipTie::Client->new( %options )
 Creates the client.
 
   username:  The Xerela server username
@@ -44,9 +44,9 @@ Creates the client.
   scheme:    The protocol scheme to use to connect to the server.  (Defaults to 'https')
   on_fault:  The method that will be called when there is an error from the server.  (Default will call C<die()>)
 
-If no username is specified the Xerela::Client will try to use $ENV{'XERELA_AUTHENTICATION'} to authenticate.  This 
+If no username is specified the ZipTie::Client will try to use $ENV{'XERELA_AUTHENTICATION'} to authenticate.  This 
 environment variable is set by the Xerela server when running script tools.  Authors of script tools my simply create
-an instance of the Xerela::Client with no options and the authentication will be handled automatically.
+an instance of the ZipTie::Client with no options and the authentication will be handled automatically.
 
 =cut
 sub new
@@ -114,7 +114,7 @@ sub port
 
     my $ns_url = 'http://www.xerela.org/server/' . $portname;
 
-    $port = Xerela::Client::Port->new($self, $proxy_url, $ns_url, $self->{on_fault});
+    $port = ZipTie::Client::Port->new($self, $proxy_url, $ns_url, $self->{on_fault});
 
     $self->{$portkey} = $port;
 
@@ -146,7 +146,7 @@ sub AUTOLOAD
 
 1;
 
-package Xerela::Client::Port;
+package ZipTie::Client::Port;
 
 use strict;
 use warnings;

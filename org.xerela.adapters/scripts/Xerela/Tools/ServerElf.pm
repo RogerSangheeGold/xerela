@@ -3,7 +3,7 @@ package Xerela::Tools::ServerElf;
 use strict;
 use warnings;
 
-use Xerela::Client;
+use ZipTie::Client;
 
 use Exporter 'import';
 use MIME::Base64 qw(decode_base64);
@@ -18,7 +18,7 @@ sub get_zed
 sub get_configuration
 {
 	my ( $ipAddress, $managedNetwork, $configurationName ) = @_;
-	my $client      = Xerela::Client->new();
+	my $client      = ZipTie::Client->new();
 	my $configstore = $client->configstore();
 	my $rev         = $configstore->retrieveRevision(
 		ipAddress      => $ipAddress,
@@ -32,7 +32,7 @@ sub get_configuration
 sub update_credential
 {
 	my ( $ipAddress, $managedNetwork, $credentialKey, $newCredentialValue ) = @_;
-	my $client      = Xerela::Client->new();
+	my $client      = ZipTie::Client->new();
 	my $credService = $client->credentials();
 	$credService->updateSingleCredential(
 		ipAddress       => $ipAddress,
@@ -49,7 +49,7 @@ sub update_dependent_credential
 	my ( $ipAddress, $managedNetwork, $credentialKey, $newCredentialValue, $dependentCredentialKey,
 		$dependentCredentialValue )
 	  = @_;
-	my $client      = Xerela::Client->new();
+	my $client      = ZipTie::Client->new();
 	my $credService = $client->credentials();
 	$credService->updateDependentCredential(
 		ipAddress                => $ipAddress,
@@ -82,7 +82,7 @@ Xerela::Tools::ServerElf
 =head1 DESCRIPTION
 
 This module is a simple abstraction of common calls into the Xerela Server.  
-The implementation uses the Xerela::Client module to call into the server
+The implementation uses the ZipTie::Client module to call into the server
 that is expected to be running on the 'localhost'.
 
 This module also only works within the context of a tool being run

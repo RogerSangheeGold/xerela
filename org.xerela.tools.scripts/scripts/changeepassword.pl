@@ -24,7 +24,7 @@ GetOptions(
 my ($connectionPath) = Xerela::Typer::translate_document( $connectionPathXml, 'connectionPath' );
 my $device           = $connectionPath->get_ip_address();
 
-my $passwordSettings	= = '<newPassword>' . $newPassword . '</newPassword>';
+my $passwordSettings	= '<newPassword>' . $newPassword . '</newPassword>';
 my $operation       	= 'changeEPassword';
 $connectionPathXml		=~ s/(<\/\w+>)$/$passwordSettings$1/;
 

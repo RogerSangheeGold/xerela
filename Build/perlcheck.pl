@@ -42,7 +42,7 @@ my @required_modules = (
 	'Crypt::SSLeay',     'IO::Socket::INET6',
 	'Net::IP',           'Text::CSV',
 	'Term::ShellUI',     'Term::ReadKey',
-	'SOAP::Lite 0.69',   'Xerela::Client',
+	'SOAP::Lite 0.69',   'ZipTie::Client',
 	'Math::BigInt',      'Math::BigInt::GMP',
 );
 
