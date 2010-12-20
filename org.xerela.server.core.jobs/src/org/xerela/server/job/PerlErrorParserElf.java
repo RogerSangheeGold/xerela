@@ -15,7 +15,7 @@
  * Portions created by AlterPoint are Copyright (C) 2007,
  * AlterPoint, Inc. All Rights Reserved.
  * 
- * Contributor(s): Dylan White (dylamite@xerela.org)
+ * Contributor(s): Dylan White (dylamite@ziptie.org)
  */
 
 package org.xerela.server.job;
@@ -39,7 +39,7 @@ import sun.misc.BASE64Decoder;
  * <code>Xerela::Logger</code> Perl module.  It is assumed that any error message containing one of these special
  * error codes should be considered more special than others and they will be filtered into their own unique exceptions.
  * 
- * @author Dylan White (dylamite@xerela.org)
+ * @author Dylan White (dylamite@ziptie.org)
  */
 @SuppressWarnings("nls")
 public final class PerlErrorParserElf

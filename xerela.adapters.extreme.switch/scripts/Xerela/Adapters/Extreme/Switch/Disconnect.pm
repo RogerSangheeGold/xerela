@@ -1,5 +1,5 @@
 # Xerela::Adapters::Extreme::Switch::Disconnect
-# Author: Ashuin Sharma (asharma@isthmusit.com), Dylan White (dylamite@xerela.org)
+# Author: Ashuin Sharma (asharma@isthmusit.com), Dylan White (dylamite@ziptie.org)
 package Xerela::Adapters::Extreme::Switch::Disconnect;
 
 use strict;

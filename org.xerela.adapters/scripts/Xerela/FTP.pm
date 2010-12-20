@@ -330,7 +330,7 @@ AlterPoint, Inc. All Rights Reserved.
 
 =head1 AUTHOR
 
-Contributor(s): dwhite (dylamite@xerela.org)
+Contributor(s): dwhite (dylamite@ziptie.org)
 Date: Apr 25, 2007
 
 =cut

@@ -156,7 +156,7 @@ AlterPoint, Inc. All Rights Reserved.
 
 =head1 AUTHOR
 
-Contributor(s): Leo Bayer (lbayer@xerela.org), Dylan White (dylamite@xerela.org)
+Contributor(s): Leo Bayer (lbayer@ziptie.org), Dylan White (dylamite@ziptie.org)
 Date: Jul 2, 2007
 
 =cut

@@ -15,7 +15,7 @@
  * Portions created by AlterPoint are Copyright (C) 2006,
  * AlterPoint, Inc. All Rights Reserved.
  * 
- * Contributor(s): rkruse, Dylan White (dylamite@xerela.org)
+ * Contributor(s): rkruse, Dylan White (dylamite@ziptie.org)
  */
 
 package org.xerela.credentials;
@@ -29,7 +29,7 @@ import org.xerela.exception.PersistenceException;
  * fulfilled for properly persisting credential-related information and retrieving it.
  * 
  * @author rkruse
- * @author Dylan White (dylamite@xerela.org)
+ * @author Dylan White (dylamite@ziptie.org)
  */
 public interface ICredentialsPersister
 {

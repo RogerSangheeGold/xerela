@@ -15,7 +15,7 @@
  * Portions created by AlterPoint are Copyright (C) 2006,
  * AlterPoint, Inc. All Rights Reserved.
  * 
- * Contributor(s): Dylan White (dylamite@xerela.org)
+ * Contributor(s): Dylan White (dylamite@ziptie.org)
  */
 
 package org.xerela.net.tools;

@@ -199,7 +199,7 @@ AlterPoint, Inc. All Rights Reserved.
 
 =head1 AUTHOR
 
-Contributor(s): Dylan White (dylamite@xerela.org)
+Contributor(s): Dylan White (dylamite@ziptie.org)
 Date: August 10, 2007
 
 =cut

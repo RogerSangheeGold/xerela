@@ -15,7 +15,7 @@
  * Portions created by AlterPoint are Copyright (C) 2006,
  * AlterPoint, Inc. All Rights Reserved.
  * 
- * Contributor(s): Leo Bayer (lbayer@xerela.org), Dylan White (dylamite@xerela.org)
+ * Contributor(s): Leo Bayer (lbayer@ziptie.org), Dylan White (dylamite@ziptie.org)
  */
 package org.xerela.net.servers;
 
@@ -26,7 +26,7 @@ import org.xerela.nio.nioagent.datagram.tftp.TftpServerImpl;
  * The {@link FileServerInfoElf} class provides easy access to the IP, port, and root directory information
  * for the TFTP and FTP servers controlled by Xerela.
  * 
- * @author Dylan White (dylamite@xerela.org)
+ * @author Dylan White (dylamite@ziptie.org)
  */
 public final class FileServerInfoElf
 {

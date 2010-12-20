@@ -34,7 +34,7 @@ package org.xerela.net.utils;
  * the case, then the root directory should be this mapped directory.
  * </ul>
  * 
- * @author Dylan White (dylamite@xerela.org)
+ * @author Dylan White (dylamite@ziptie.org)
  */
 @SuppressWarnings("nls")
 public class FileServerInfo

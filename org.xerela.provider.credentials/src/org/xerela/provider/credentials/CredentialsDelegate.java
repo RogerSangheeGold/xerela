@@ -32,7 +32,7 @@ import org.xerela.server.security.SecurityHandler;
  * The {@link CredentialsDelegate} class implements the {@link ICredentialsProvider} interface in order to act as a delegate to perform the various
  * functionality to be made available in order to create, update, and delete credential and protocol information that is used through-out Xerela.
  * 
- * @author Dylan White (dylamite@xerela.org)
+ * @author Dylan White (dylamite@ziptie.org)
  */
 public class CredentialsDelegate implements ICredentialsProvider
 {

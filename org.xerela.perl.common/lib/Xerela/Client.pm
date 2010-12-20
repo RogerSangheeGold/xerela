@@ -311,7 +311,7 @@ AlterPoint, Inc. All Rights Reserved.
 
 =head1 AUTHOR
 
-lbayer (lbayer@xerela.org)
+lbayer (lbayer@ziptie.org)
 
 =head1 BUGS
 

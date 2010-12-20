@@ -18,10 +18,10 @@ xerela MODULE-IDENTITY
 		Austin, TX 78701
 		U.S.A
 		Tel:  (512) 536-8346
-		Email: rkruse@xerela.org
-		www.xerela.org"
+		Email: rkruse@ziptie.org
+		www.ziptie.org"
 	DESCRIPTION
-		"Xerela SNMP Trap Definitions"
+		"ZipTie SNMP Trap Definitions"
 	REVISION "200709272023Z"	-- Sep 27, 2007 8:23:00 PM
 	DESCRIPTION
 		"Initial version."

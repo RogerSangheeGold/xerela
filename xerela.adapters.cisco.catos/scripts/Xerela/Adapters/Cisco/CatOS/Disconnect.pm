@@ -1,7 +1,7 @@
 # Xerela::IOS::Disconnect helps automate the exit and disconnect process from IOS-based devices.
 # This includes IOS, CatIOS, and MSFC.
 #
-# Author:	Dylan White (dylamite@xerela.org)
+# Author:	Dylan White (dylamite@ziptie.org)
 package Xerela::Adapters::Cisco::CatOS::Disconnect;
 
 use strict;

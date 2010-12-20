@@ -32,7 +32,7 @@ import org.xerela.zap.security.ZInvocationSecurity;
  * The {@link ICredentialsProvider} class specifies an interface describing the various functionality to be made
  * available in order to create, update, and delete credential and protocol information that is used through-out Xerela.
  * 
- * @author Dylan White (dylamite@xerela.org)
+ * @author Dylan White (dylamite@ziptie.org)
  */
 // MULTIPLESTRINGS:OFF
 @WebService(name = "Credentials", targetNamespace = "http://www.xerela.org/server/credentials")

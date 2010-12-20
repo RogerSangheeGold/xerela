@@ -15,7 +15,7 @@
  * Portions created by AlterPoint are Copyright (C) 2006,
  * AlterPoint, Inc. All Rights Reserved.
  * 
- * Contributor(s): Dylan White (dylamite@xerela.org)
+ * Contributor(s): Dylan White (dylamite@ziptie.org)
  */
 
 package org.xerela.net.adapters;
@@ -29,7 +29,7 @@ import org.xerela.protocols.ProtocolSet;
  * The <code>Operation</code> class represents a simple container to store the name of an operation that
  * an adapter can perform and what collection of protocols can be used to perform that operation.
  * 
- * @author Dylan White (dylamite@xerela.org)
+ * @author Dylan White (dylamite@ziptie.org)
  */
 @SuppressWarnings("nls")
 public class Operation

@@ -15,7 +15,7 @@
  * Portions created by AlterPoint are Copyright (C) 2006,
  * AlterPoint, Inc. All Rights Reserved.
  * 
- * Contributor(s): kruse, Dylan White (dylamite@xerela.org)
+ * Contributor(s): kruse, Dylan White (dylamite@ziptie.org)
  */
 
 package org.xerela.protocols;
@@ -32,7 +32,7 @@ import org.xerela.exception.PersistenceException;
  * The ID field is considered to be a unique primary key.
  * 
  * @author rkruse
- * @author Dylan White (dylamite@xerela.org)
+ * @author Dylan White (dylamite@ziptie.org)
  */
 public interface IProtocolPersister
 {

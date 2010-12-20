@@ -15,7 +15,7 @@
  * Portions created by AlterPoint are Copyright (C) 2006,
  * AlterPoint, Inc. All Rights Reserved.
  * 
- * Contributor(s): rkruse, Dylan White (dylamite@xerela.org)
+ * Contributor(s): rkruse, Dylan White (dylamite@ziptie.org)
  */
 
 package org.xerela.provider.credentials;
@@ -47,7 +47,7 @@ import org.xerela.security.PermissionDeniedException;
  * it as a singleton instance.  It also leverages the Device provider to provide device ID to device resolution so that an IP address and
  * managed network associated with the device can be retrieved and used to determine which credentials sets should be used.
  * 
- * @author Dylan White (dylamite@xerela.org)
+ * @author Dylan White (dylamite@ziptie.org)
  * @author rkruse
  */
 public class XerelaCredentialsManager extends AbstractCredentialsManager

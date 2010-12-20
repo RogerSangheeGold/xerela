@@ -15,7 +15,7 @@
  * Portions created by AlterPoint are Copyright (C) 2006, 2007,
  * AlterPoint, Inc. All Rights Reserved.
  * 
- * Contributor(s): Dylan White (dylamite@xerela.org)
+ * Contributor(s): Dylan White (dylamite@ziptie.org)
  */
 
 package org.xerela.server.job.backup;
@@ -43,7 +43,7 @@ import org.xerela.server.job.internal.CoreJobsActivator;
  * The <code>CredentialElf</code> class provides a number of helper functions for converting internal Xerela <code>Credential</code>
  * objects into SOAP-compatible <code>Credential</code> objects.
  * 
- * @author Dylan White (dylamite@xerela.org)
+ * @author Dylan White (dylamite@ziptie.org)
  */
 public final class CredentialElf
 {

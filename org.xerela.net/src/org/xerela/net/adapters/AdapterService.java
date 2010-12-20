@@ -15,7 +15,7 @@
  * Portions created by AlterPoint are Copyright (C) 2006,
  * AlterPoint, Inc. All Rights Reserved.
  *
- * Contributor(s): Dylan White (dylamite@xerela.org)
+ * Contributor(s): Dylan White (dylamite@ziptie.org)
  */
 
 package org.xerela.net.adapters;
@@ -68,7 +68,7 @@ import org.xerela.protocols.ProtocolSetElf;
  * are parsed into equivalent {@link AdapterMetadata} objects that provide access to the metadata in a simple
  * fashion.
  *
- * @author Dylan White (dylamite@xerela.org)
+ * @author Dylan White (dylamite@ziptie.org)
  */
 @SuppressWarnings("nls")
 public final class AdapterService implements IAdapterService
@@ -583,7 +583,7 @@ public final class AdapterService implements IAdapterService
      * for use with {@link AdapterService}'s {@link #getInstance()} method, which is designed to
      * retrieve the singleton instance of that class.
      *
-     * @author Dylan White (dylamite@xerela.org)
+     * @author Dylan White (dylamite@ziptie.org)
      * @deprecated
      */
     @Deprecated

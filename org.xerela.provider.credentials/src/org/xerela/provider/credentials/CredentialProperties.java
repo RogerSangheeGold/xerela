@@ -36,7 +36,7 @@ import org.eclipse.osgi.util.NLS;
 /**
  * The <code>CredentialProperties</code> class provides functionality for persisting properties associated with credentials and protocols.
  * 
- * @author Dylan White (dylamite@xerela.org)
+ * @author Dylan White (dylamite@ziptie.org)
  */
 public class CredentialProperties
 {
@@ -144,7 +144,7 @@ public class CredentialProperties
      * for use with <code>CredentialProperties</code>'s {@link #getInstance()} method, which is designed to
      * retrieve the singleton instance of that class.
      * 
-     * @author Dylan White (dylamite@xerela.org)
+     * @author Dylan White (dylamite@ziptie.org)
      */
     private static class CredentialPropertiesSingleton
     {

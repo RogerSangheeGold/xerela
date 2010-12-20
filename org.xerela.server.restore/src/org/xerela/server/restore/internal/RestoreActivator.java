@@ -31,7 +31,7 @@ import org.xerela.server.dispatcher.OperationManager;
  * The {@link RestoreActivator} class provides the mechanism for starting and stopping the functionality of the
  * org.xerela.server.restore bundle.
  * 
- * @author Dylan White (dylamite@xerela.org)
+ * @author Dylan White (dylamite@ziptie.org)
  */
 public class RestoreActivator implements BundleActivator
 {

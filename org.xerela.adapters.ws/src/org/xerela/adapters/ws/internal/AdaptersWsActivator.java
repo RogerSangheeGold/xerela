@@ -15,7 +15,7 @@
  * Portions created by AlterPoint are Copyright (C) 2006,
  * AlterPoint, Inc. All Rights Reserved.
  * 
- * Contributor(s): Leo Bayer (lbayer@xerela.org), Dylan White (dylamite@xerela.org)
+ * Contributor(s): Leo Bayer (lbayer@ziptie.org), Dylan White (dylamite@ziptie.org)
  */
 package org.xerela.adapters.ws.internal;
 

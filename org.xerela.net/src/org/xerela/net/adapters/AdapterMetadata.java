@@ -15,7 +15,7 @@
  * Portions created by AlterPoint are Copyright (C) 2006,
  * AlterPoint, Inc. All Rights Reserved.
  * 
- * Contributor(s): Dylan White (dylamite@xerela.org)
+ * Contributor(s): Dylan White (dylamite@ziptie.org)
  */
 
 package org.xerela.net.adapters;
@@ -30,7 +30,7 @@ import java.util.Map;
  * metadata XML file.  An adapter metadata XML files specifies all of the information that is need to describe,
  * identifiy, and utilize an adapter and its functionality.
  * 
- * @author Dylan White (dylamite@xerela.org)
+ * @author Dylan White (dylamite@ziptie.org)
  */
 @SuppressWarnings("nls")
 public class AdapterMetadata

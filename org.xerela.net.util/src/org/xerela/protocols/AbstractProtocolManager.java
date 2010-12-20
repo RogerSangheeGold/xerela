@@ -12,7 +12,7 @@
  * The Initial Developer of the Original Code is AlterPoint. Portions created by
  * AlterPoint are Copyright (C) 2006, AlterPoint, Inc. All Rights Reserved.
  * 
- * Contributor(s): rkruse, Dylan White (dylamite@xerela.org)
+ * Contributor(s): rkruse, Dylan White (dylamite@ziptie.org)
  */
 
 package org.xerela.protocols;
@@ -35,7 +35,7 @@ import org.xerela.security.PermissionDeniedException;
  * protocol objects in relation to each other.
  * 
  * @author rkruse
- * @author Dylan White (dylamite@xerela.org)
+ * @author Dylan White (dylamite@ziptie.org)
  */
 public abstract class AbstractProtocolManager
 {

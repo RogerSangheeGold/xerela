@@ -15,7 +15,7 @@
  * Portions created by AlterPoint are Copyright (C) 2006,
  * AlterPoint, Inc. All Rights Reserved.
  * 
- * Contributor(s): rkruse, Dylan White (dylamite@xerela.org)
+ * Contributor(s): rkruse, Dylan White (dylamite@ziptie.org)
  */
 
 package org.xerela.credentials;
@@ -36,7 +36,7 @@ import org.xerela.security.PermissionDeniedException;
  * credential objects in relation to each other.
  * 
  * @author rkruse
- * @author Dylan White (dylamite@xerela.org)
+ * @author Dylan White (dylamite@ziptie.org)
  */
 public abstract class AbstractCredentialsManager
 {

@@ -31,7 +31,7 @@ import org.xerela.server.job.AdapterEndpointElf;
 /**
  * The {@link RestoreTask} class provides functionality for restoring a device configuration to a particular device.
  * 
- * @author Dylan White (dylamite@xerela.org)
+ * @author Dylan White (dylamite@ziptie.org)
  */
 public class RestoreTask extends AbstractAdapterTask
 {

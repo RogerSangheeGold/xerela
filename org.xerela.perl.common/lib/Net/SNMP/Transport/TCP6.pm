@@ -21,7 +21,7 @@ use Net::SNMP::Transport::TCP qw( DOMAIN_TCPIPV6 DOMAIN_TCPIPV6Z );
 
 use IO::Socket qw( SOCK_STREAM );
 
-use Socket6 0.19 qw(
+use Socket6 0.23 qw(
    in6addr_any in6addr_loopback getaddrinfo PF_INET6 pack_sockaddr_in6_all
    getnameinfo NI_NUMERICHOST NI_NUMERICSERV unpack_sockaddr_in6_all
 );

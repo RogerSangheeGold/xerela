@@ -27,8 +27,8 @@ import javax.jws.soap.SOAPBinding;
  * The {@link INilSettingsProvider} defines an interface for providing the ability to modify the settings for the
  * Network Interface Layer (NIL).
  * 
- * @author Leo Bayer (lbayer@xerela.org)
- * @author Dylan White (dylamite@xerela.org)
+ * @author Leo Bayer (lbayer@ziptie.org)
+ * @author Dylan White (dylamite@ziptie.org)
  */
 @WebService(name = "NilSettings", targetNamespace = "http://www.xerela.org/server/nilsettings")
 @SOAPBinding(style = SOAPBinding.Style.DOCUMENT, parameterStyle = SOAPBinding.ParameterStyle.WRAPPED)

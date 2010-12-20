@@ -564,7 +564,7 @@ AlterPoint, Inc. All Rights Reserved.
 
 =head1 AUTHOR
 
-Contributor(s): Ashuin Sharma(asharma@isthmusit.com), dwhite (dylamite@xerela.org)
+Contributor(s): Ashuin Sharma(asharma@isthmusit.com), dwhite (dylamite@ziptie.org)
 Date: Sep 29, 2007
 
 =cut
