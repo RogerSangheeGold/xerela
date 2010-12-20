@@ -44,6 +44,8 @@ my @required_modules = (
 	'Term::ShellUI',     'Term::ReadKey',
 	'SOAP::Lite 0.69',   'ZipTie::Client',
 	'Math::BigInt',      'Math::BigInt::GMP',
+    'Crypt::DES',        'Class::Inspector',
+    'Net::Ping::External', 'Socket6',
 );
 
 # Get absolute path of ppm ( we suppose ppm is located in the same directory as perl executable).
@@ -55,7 +57,7 @@ my $ppmExePath = (/^(.+)(\\|\/)[^\\\/]+$/) ? $1 . $2 . 'ppm' : 'ppm';
 if ( $OS !~ /MSWin32/i )
 {
 	push( @required_modules,
-		'Socket6',      'Crypt::DES', 'Net::SNMP',
+		'Crypt::DES', 'Net::SNMP',
 		'Digest::SHA1', 'Digest::HMAC', );
 }
 
@@ -127,7 +129,7 @@ if ( @missing_modules > 0 )
 				if ($perl510)
 				{
 					$command =
-"$ppmExePath install http://cpan.uwinnipeg.ca/PPMPackages/10xx/SOAP-Lite.ppd";
+"$ppmExePath install http://www.bribes.org/perl/ppm/SOAP-Lite.ppd";
 				}
 				else
 				{
@@ -184,7 +186,7 @@ if ( @missing_modules > 0 )
 else
 {
 	print(
-"All the Perl modules required by Xerela are already installed!  Yatta!\n"
+"All the Perl modules required by Xerela are already installed!\n"
 	);
 }
 
