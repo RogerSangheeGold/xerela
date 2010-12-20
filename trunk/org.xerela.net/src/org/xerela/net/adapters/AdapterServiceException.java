@@ -15,7 +15,7 @@
  * Portions created by AlterPoint are Copyright (C) 2006,
  * AlterPoint, Inc. All Rights Reserved.
  * 
- * Contributor(s): Dylan White (dylamite@xerela.org)
+ * Contributor(s): Dylan White (dylamite@ziptie.org)
  */
 
 package org.xerela.net.adapters;
@@ -25,7 +25,7 @@ package org.xerela.net.adapters;
  * the use of the <code>AdapterService</code> class.  It is to be thrown inside classes that are used by the 
  * <code>AdapterService</code> class.
  * 
- * @author Dylan White (dylamite@xerela.org)
+ * @author Dylan White (dylamite@ziptie.org)
  */
 public class AdapterServiceException extends Exception
 {

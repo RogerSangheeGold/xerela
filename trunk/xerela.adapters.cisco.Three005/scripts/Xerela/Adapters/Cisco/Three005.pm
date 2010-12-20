@@ -203,7 +203,7 @@ AlterPoint, Inc. All Rights Reserved.
 
 =head1 AUTHOR
 
-Contributor(s): asharma, rkruse, Dylan White (dylamite@xerela.org)
+Contributor(s): asharma, rkruse, Dylan White (dylamite@ziptie.org)
 Date: Sep 29, 2007
 
 =cut

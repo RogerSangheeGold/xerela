@@ -42,7 +42,7 @@ import org.xerela.credentials.CredentialKey;
  * or as an <code>InputStream</code>.  The XML document that is referenced by the resource will then be parsed for any
  * credential key information and loaded into a <code>List</code> of <code>CredentialKey</code> objects.
  * 
- * @author Dylan White (dylamite@xerela.org)
+ * @author Dylan White (dylamite@ziptie.org)
  */
 public final class CredentialKeyElf
 {

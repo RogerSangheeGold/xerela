@@ -57,7 +57,7 @@ AlterPoint, Inc. All Rights Reserved.
 
 =head1 AUTHOR
 
-Contributor(s): Leo Bayer (lbayer@xerela.org)
+Contributor(s): Leo Bayer (lbayer@ziptie.org)
 Date: April 8, 2008
 
 =cut

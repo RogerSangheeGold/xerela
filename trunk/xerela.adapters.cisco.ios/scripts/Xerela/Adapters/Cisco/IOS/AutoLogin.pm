@@ -1,7 +1,7 @@
 # Xerela::IOS::AutoLogin helps automate the login process for IOS-based devices.
 # This includes IOS, CatIOS, and MSFC.
 #
-# Author:	Dylan White (dylamite@xerela.org)
+# Author:	Dylan White (dylamite@ziptie.org)
 package Xerela::Adapters::Cisco::IOS::AutoLogin;
 
 use strict;
@@ -606,7 +606,7 @@ AlterPoint, Inc. All Rights Reserved.
 
 =head1 AUTHOR
 
-Contributor(s): rkruse, Dylan White (dylamite@xerela.org)
+Contributor(s): rkruse, Dylan White (dylamite@ziptie.org)
 Date: August 10, 2007
 
 =cut

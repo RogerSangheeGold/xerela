@@ -37,8 +37,8 @@ import org.xerela.net.servers.FileServerInfoElf;
 /**
  * The {@link NilSettingsProvider} provides the ability to modify the settings for the Network Interface Layer (NIL).
  * 
- * @author Leo Bayer (lbayer@xerela.org)
- * @author Dylan White (dylamite@xerela.org)
+ * @author Leo Bayer (lbayer@ziptie.org)
+ * @author Dylan White (dylamite@ziptie.org)
  */
 public class NilSettingsProvider implements INilSettingsProvider
 {

@@ -314,7 +314,7 @@ AlterPoint, Inc. All Rights Reserved.
 
 =head1 AUTHOR
 
-Contributor(s): rkruse, Dylan White (dylamite@xerela.org), Brent Gerig (brgerig@taylor.edu)
+Contributor(s): rkruse, Dylan White (dylamite@ziptie.org), Brent Gerig (brgerig@taylor.edu)
 Date: November 20, 2007
 
 =cut

@@ -15,7 +15,7 @@
  * Portions created by AlterPoint are Copyright (C) 2006,
  * AlterPoint, Inc. All Rights Reserved.
  * 
- * Contributor(s): rkruse, Dylan White (dylamite@xerela.org)
+ * Contributor(s): rkruse, Dylan White (dylamite@ziptie.org)
  */
 
 package org.xerela.provider.credentials;
@@ -46,7 +46,7 @@ import org.xerela.zap.jta.TransactionElf;
  * The {@link DatabaseProtocolPersister} class provides an implementation of the {@link IProtocolPersister}
  * interface that uses a database in order to persist protocol information.
  * 
- * @author Dylan White (dylamite@xerela.org)
+ * @author Dylan White (dylamite@ziptie.org)
  */
 public class DatabaseProtocolPersister implements IProtocolPersister
 {

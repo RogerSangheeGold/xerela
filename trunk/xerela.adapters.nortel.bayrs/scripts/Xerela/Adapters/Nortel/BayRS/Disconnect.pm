@@ -1,6 +1,6 @@
 # Disconnect helps automate the exit and disconnect process from the devices.
 #
-# Author:	Dylan White (dylamite@xerela.org)
+# Author:	Dylan White (dylamite@ziptie.org)
 # Customized to work with !IOS devices: Mekhman Kourbanov (mkourbanov@isthmusit.com)
 package Xerela::Adapters::Nortel::BayRS::Disconnect;
 

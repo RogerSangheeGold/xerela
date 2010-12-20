@@ -463,7 +463,7 @@ public final class ScriptBindingElf
     /**
      * Inner-class used to wrap the functionality of a {@link Dictionary} around an implementation of the {@link IProperties} interface.
      * 
-     * @author Dylan White (dylamite@xerela.org)
+     * @author Dylan White (dylamite@ziptie.org)
      */
     @SuppressWarnings("nls")
     private static class PropertiesDictionary extends Dictionary<String, String>

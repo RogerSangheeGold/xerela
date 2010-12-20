@@ -15,7 +15,7 @@
  * Portions created by AlterPoint are Copyright (C) 2006,
  * AlterPoint, Inc. All Rights Reserved.
  * 
- * Contributor(s): rkruse, Dylan White (dylamite@xerela.org)
+ * Contributor(s): rkruse, Dylan White (dylamite@ziptie.org)
  */
 
 package org.xerela.protocols;
@@ -35,7 +35,7 @@ import javax.persistence.TableGenerator;
  * This indicates the exact protocol that worked for the particular device that the device ID is associated with.
  *
  * @author rkruse
- * @author Dylan White (dylamite@xerela.org)
+ * @author Dylan White (dylamite@ziptie.org)
  */
 @Entity
 @Table(name = "device_to_protocol_mappings")

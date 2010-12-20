@@ -192,7 +192,7 @@ under the License.
 
 =head1 AUTHOR
 
-Contributor(s): Leo Bayer (lbayer@xerela.org), Dylan White (dylamite@xerela.org)
+Contributor(s): Leo Bayer (lbayer@ziptie.org), Dylan White (dylamite@ziptie.org)
 Date: Jul 1, 2007
 
 =cut

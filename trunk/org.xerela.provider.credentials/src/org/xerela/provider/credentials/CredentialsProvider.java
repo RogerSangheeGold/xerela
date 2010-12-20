@@ -35,7 +35,7 @@ import org.xerela.security.PermissionDeniedException;
  * available in order to create, update, and delete credential and protocol information that is used through-out Xerela.  This class makes heavy use
  * of the {@link AbstractCredentialsManager} and {@link AbstractProtocolManager} classes to provide the necessary support and functionality.
  * 
- * @author Dylan White (dylamite@xerela.org)
+ * @author Dylan White (dylamite@ziptie.org)
  */
 public class CredentialsProvider implements ICredentialsProvider
 {

@@ -43,7 +43,7 @@ import org.xerela.zap.jta.TransactionElf;
  * to provide support for tasks that are meant to execute various adapter operations.  It provides mechanisms for retrieving
  * all of the protocol and credential information needed to connect to a device for an adapter operation.
  * 
- * @author Dylan White (dylamite@xerela.org)
+ * @author Dylan White (dylamite@ziptie.org)
  */
 public abstract class AbstractAdapterTask implements ITask
 {
